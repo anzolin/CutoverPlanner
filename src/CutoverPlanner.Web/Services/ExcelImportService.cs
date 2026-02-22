@@ -84,7 +84,7 @@ namespace CutoverPlanner.Web.Services
                 var lr2 = ws2.LastRowUsed()?.RowNumber() ?? 1;
                 for (int r = 2; r <= lr2; r++)
                 {
-                    var ep = new Endpoint
+                    var ep = new Models.Endpoint
                     {
                         Sistemas = ws2.Cell(r, 1).GetString(),
                         TipoIntegracao = ws2.Cell(r, 2).GetString(),
@@ -163,7 +163,8 @@ namespace CutoverPlanner.Web.Services
             return s switch
             {
                 "EM ANDAMENTO" => StatusAtividade.EmAndamento,
-                "CONCLUÍDO" || "CONCLUIDO" => StatusAtividade.Concluido,
+                "CONCLUÍDO" => StatusAtividade.Concluido,
+                "CONCLUIDO" => StatusAtividade.Concluido,
                 _ => StatusAtividade.NaoIniciado
             };
         }

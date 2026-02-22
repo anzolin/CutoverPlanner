@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using CutoverPlanner.Web.Models;
 
@@ -9,7 +8,7 @@ namespace CutoverPlanner.Web.Data
         public DbSet<Atividade> Atividades => Set<Atividade>();
         public DbSet<AtividadeDependencia> AtividadeDependencias => Set<AtividadeDependencia>();
         public DbSet<AreaExecutora> AreasExecutoras => Set<AreaExecutora>();
-        public DbSet<Endpoint> Endpoints => Set<Endpoint>();
+        public DbSet<Models.Endpoint> Endpoints => Set<Models.Endpoint>();
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
