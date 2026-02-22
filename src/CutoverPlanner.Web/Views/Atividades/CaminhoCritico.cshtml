@@ -1,0 +1,13 @@
+
+@model IEnumerable<CutoverPlanner.Web.Models.Atividade>
+@{
+    var total = (TimeSpan)ViewBag.Total;
+}
+<h2>Caminho Crítico</h2>
+<p>Duração total: <b>@total</b></p>
+<ol>
+@foreach (var a in Model)
+{
+    <li>@a.Titulo (@a.Start?.ToString("dd/MM HH:mm") - @a.End?.ToString("dd/MM HH:mm"))</li>
+}
+</ol>

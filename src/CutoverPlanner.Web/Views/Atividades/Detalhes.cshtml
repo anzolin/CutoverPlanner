@@ -1,0 +1,24 @@
+
+@model CutoverPlanner.Web.Models.Atividade
+<h2>Detalhes da Atividade</h2>
+<dl class="row">
+  <dt class="col-sm-3">Sistema</dt><dd class="col-sm-9">@Model.Sistema</dd>
+  <dt class="col-sm-3">Milestone</dt><dd class="col-sm-9">@Model.Milestone</dd>
+  <dt class="col-sm-3">Título</dt><dd class="col-sm-9">@Model.Titulo</dd>
+  <dt class="col-sm-3">Categoria</dt><dd class="col-sm-9">@Model.Categoria</dd>
+  <dt class="col-sm-3">Requer Teste</dt><dd class="col-sm-9">@(Model.RequerTestePerformance ? "Sim" : "Não")</dd>
+  <dt class="col-sm-3">Tipo/Teste</dt><dd class="col-sm-9">@Model.TipoTeste</dd>
+  <dt class="col-sm-3">Procedimento</dt><dd class="col-sm-9">@Model.Procedimento</dd>
+  <dt class="col-sm-3">Métricas</dt><dd class="col-sm-9">@Model.Metricas</dd>
+  <dt class="col-sm-3">Critério</dt><dd class="col-sm-9">@Model.CriterioAceite</dd>
+  <dt class="col-sm-3">Evidências</dt><dd class="col-sm-9">@Model.Evidencias</dd>
+  <dt class="col-sm-3">Responsável</dt><dd class="col-sm-9">@Model.Responsavel</dd>
+  <dt class="col-sm-3">Área</dt><dd class="col-sm-9">@Model.AreaExecutoraNome</dd>
+  <dt class="col-sm-3">Executor</dt><dd class="col-sm-9">@Model.Executor</dd>
+  <dt class="col-sm-3">Status</dt><dd class="col-sm-9">@Model.Status</dd>
+  <dt class="col-sm-3">Risco Go-live</dt><dd class="col-sm-9">@(Model.RiscoGoLive == true ? "Sim" : Model.RiscoGoLive == false ? "Não" : "-")</dd>
+  <dt class="col-sm-3">Início</dt><dd class="col-sm-9">@Model.Start?.ToString("dd/MM/yyyy HH:mm")</dd>
+  <dt class="col-sm-3">Fim</dt><dd class="col-sm-9">@Model.End?.ToString("dd/MM/yyyy HH:mm")</dd>
+  <dt class="col-sm-3">Observação</dt><dd class="col-sm-9">@Model.Observacao</dd>
+  <dt class="col-sm-3">Repositório</dt><dd class="col-sm-9"><a href="@Model.LinkRepositorio" target="_blank">@Model.LinkRepositorio</a></dd>
+</dl>

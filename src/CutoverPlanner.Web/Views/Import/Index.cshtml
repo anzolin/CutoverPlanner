@@ -1,0 +1,11 @@
+
+@{
+    ViewData["Title"] = "Importar Planilha";
+}
+<h2>Importar Planilha (.xlsx)</h2>
+<form method="post" enctype="multipart/form-data" action="/Import/Upload">
+  <input type="file" name="file" accept=".xlsx" class="form-control w-50" />
+  <button class="btn btn-primary mt-2" type="submit">Importar</button>
+</form>
+@if (TempData["Msg"] != null) { <div class="alert alert-success mt-2">@TempData["Msg"]</div> }
+@if (TempData["Error"] != null) { <div class="alert alert-danger mt-2">@TempData["Error"]</div> }

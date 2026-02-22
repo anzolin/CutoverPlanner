@@ -1,0 +1,52 @@
+
+@model IEnumerable<CutoverPlanner.Web.Models.Atividade>
+@{
+    ViewData["Title"] = "Atividades";
+}
+<h2>Atividades</h2>
+@if (ViewBag.DefaultApplied == true)
+{
+    <div class="alert alert-info">Filtro padrão aplicado: Área = <b>@ViewBag.DefArea</b>, Status ≠ <b>@ViewBag.DefStatusNot</b>. Altere os filtros pelo formulário abaixo.</div>
+}
+<form method="get" class="row g-2 mb-3">
+  <div class="col-auto"><input class="form-control" name="sistema" placeholder="Sistema" /></div>
+  <div class="col-auto"><input class="form-control" name="area" placeholder="Área Executora" /></div>
+  <div class="col-auto"><input class="form-control" name="responsavel" placeholder="Responsável" /></div>
+  <div class="col-auto">
+    <select class="form-select" name="status">
+      <option value="">-- Status --</option>
+      <option value="NaoIniciado">Não Iniciado</option>
+      <option value="EmAndamento">Em Andamento</option>
+      <option value="Concluido">Concluído</option>
+    </select>
+  </div>
+  <div class="col-auto"><input class="form-control" name="busca" placeholder="Busca" /></div>
+  <div class="col-auto"><button class="btn btn-secondary" type="submit">Filtrar</button></div>
+</form>
+<table class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>ID</th><th>Sistema</th><th>Título</th><th>Área</th><th>Status</th><th>Start</th><th>End</th><th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var a in Model)
+    {
+      <tr>
+        <td>@a.IdPlanilha</td>
+        <td>@a.Sistema</td>
+        <td><a href="/Atividades/Detalhes/@a.Id">@a.Titulo</a></td>
+        <td>@a.AreaExecutoraNome</td>
+        <td>@a.Status</td>
+        <td>@a.Start?.ToString("dd/MM/yyyy HH:mm")</td>
+        <td>@a.End?.ToString("dd/MM/yyyy HH:mm")</td>
+        <td>
+          <a class="btn btn-sm btn-outline-primary" href="/Atividades/Editar/@a.Id">Editar</a>
+          <form method="post" action="/Atividades/Excluir/@a.Id" style="display:inline" onsubmit="return confirm('Excluir?');">
+            <button class="btn btn-sm btn-outline-danger">Excluir</button>
+          </form>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

@@ -1,0 +1,1061 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "ClosedXML >= 0.105.0",
+      "Microsoft.EntityFrameworkCore >= 9.0.2",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\daf21\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "projectName": "CutoverPlanner.Web",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "packagesPath": "C:\\Users\\daf21\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\daf21\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json": {},
+        "https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "ClosedXML": {
+            "target": "Package",
+            "version": "[0.105.0, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.0.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML.Parser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML.Parser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ExcelNumberFormat"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ExcelNumberFormat"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SixLabors.Fonts"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML.Parser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "RBush.Signed"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SixLabors.Fonts"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ClosedXML.Parser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "RBush.Signed"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ExcelNumberFormat"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "ExcelNumberFormat"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SixLabors.Fonts"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "RBush.Signed"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SixLabors.Fonts"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "RBush.Signed"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Memory"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyModel"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyModel"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "System.Text.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "System.Text.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyModel"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyModel"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "System.Text.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "System.Text.Json"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Options"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Options"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Data.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Data.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Locator"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Locator"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp.Workspaces"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp.Workspaces"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Mono.TextTemplating"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Mono.TextTemplating"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "DocumentFormat.OpenXml.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Mono.TextTemplating"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Mono.TextTemplating"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Primitives"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Build.Framework"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Data.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Data.Sqlite.Core"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Options"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Options"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Falha ao baixar o pacote 'Microsoft.CodeAnalysis.CSharp.4.8.0' de 'https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg'.\r\nA solicitação HTTP para 'GET https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg' expirou após 100000ms."
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions"
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "O feed 'nuget.org [https://api.nuget.org/v3/index.json]' lista o pacote 'Microsoft.CodeAnalysis.CSharp.4.8.0', mas várias tentativas de baixar o nupkg falharam. O feed é inválido ou os pacotes necessários foram removidos enquanto a operação atual estava em andamento. Verifique se o pacote existe no feed e tente novamente."
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3"
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Falha ao baixar o pacote 'SQLitePCLRaw.lib.e_sqlite3.2.1.10' de 'https://api.nuget.org/v3-flatcontainer/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg'.\r\nA solicitação HTTP para 'GET https://api.nuget.org/v3-flatcontainer/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg' expirou após 100000ms."
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "O feed 'nuget.org [https://api.nuget.org/v3/index.json]' lista o pacote 'SQLitePCLRaw.lib.e_sqlite3.2.1.10', mas várias tentativas de baixar o nupkg falharam. O feed é inválido ou os pacotes necessários foram removidos enquanto a operação atual estava em andamento. Verifique se o pacote existe no feed e tente novamente."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+
+@{
+    ViewData["Title"] = "Dashboard";
+    var total = (int)ViewBag.Total;
+    var concl = (int)ViewBag.Concl;
+    var emAnd = (int)ViewBag.EmAnd;
+    var naoIni = (int)ViewBag.NaoIni;
+    var pct = (int)ViewBag.Pct;
+    var riscos = (IEnumerable<CutoverPlanner.Web.Models.Atividade>)ViewBag.Riscos;
+}
+<h2>Dashboard</h2>
+<div class="row g-3">
+  <div class="col"><div class="card p-3">Total: <b>@total</b></div></div>
+  <div class="col"><div class="card p-3">Concluído: <b>@concl</b> (@pct%)</div></div>
+  <div class="col"><div class="card p-3">Em andamento: <b>@emAnd</b></div></div>
+  <div class="col"><div class="card p-3">Não iniciado: <b>@naoIni</b></div></div>
+</div>
+<h4 class="mt-4">Riscos Go-live</h4>
+<table class="table table-sm table-striped">
+  <thead><tr><th>Sistema</th><th>Título</th><th>Start</th><th>End</th><th>Status</th></tr></thead>
+  <tbody>
+    @foreach (var r in riscos) {
+      <tr>
+        <td>@r.Sistema</td>
+        <td><a href="/Atividades/Detalhes/@r.Id">@r.Titulo</a></td>
+        <td>@r.Start?.ToString("dd/MM/yyyy HH:mm")</td>
+        <td>@r.End?.ToString("dd/MM/yyyy HH:mm")</td>
+        <td>@r.Status</td>
+      </tr>
+    }
+  </tbody>
+</table>

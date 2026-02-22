@@ -1,0 +1,1436 @@
+{
+  "version": 2,
+  "dgSpecHash": "hsNLCybtHUQ=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML.Parser",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML.Parser",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ExcelNumberFormat",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ExcelNumberFormat",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SixLabors.Fonts",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML.Parser",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "RBush.Signed",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SixLabors.Fonts",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ClosedXML.Parser",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "RBush.Signed",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ExcelNumberFormat",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "ExcelNumberFormat",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SixLabors.Fonts",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "RBush.Signed",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SixLabors.Fonts",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "RBush.Signed",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Analyzers",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyModel",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyModel",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.bundle_e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyModel",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyModel",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Options",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Options",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Data.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Data.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Locator",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Locator",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Mono.TextTemplating",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Mono.TextTemplating",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "DocumentFormat.OpenXml.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Mono.TextTemplating",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Mono.TextTemplating",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Build.Framework",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.CSharp",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Caching.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.CodeAnalysis.Workspaces.MSBuild",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.provider.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Data.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Data.Sqlite.Core",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Options",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Options",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Falha ao baixar o pacote 'Microsoft.CodeAnalysis.CSharp.4.8.0' de 'https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg'.\r\nA solicitação HTTP para 'GET https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg' expirou após 100000ms.",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-prd/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": []
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "O feed 'nuget.org [https://api.nuget.org/v3/index.json]' lista o pacote 'Microsoft.CodeAnalysis.CSharp.4.8.0', mas várias tentativas de baixar o nupkg falharam. O feed é inválido ou os pacotes necessários foram removidos enquanto a operação atual estava em andamento. Verifique se o pacote existe no feed e tente novamente.",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Não é possível carregar o índice de serviço para a origem https://artifactory.energisa.corp/artifactory/api/nuget/v3/nuget-hmg/index.json.\r\n  O código de status de resposta não indica êxito: 401 ().",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": []
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Falha ao baixar o pacote 'SQLitePCLRaw.lib.e_sqlite3.2.1.10' de 'https://api.nuget.org/v3-flatcontainer/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg'.\r\nA solicitação HTTP para 'GET https://api.nuget.org/v3-flatcontainer/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg' expirou após 100000ms.",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "O feed 'nuget.org [https://api.nuget.org/v3/index.json]' lista o pacote 'SQLitePCLRaw.lib.e_sqlite3.2.1.10', mas várias tentativas de baixar o nupkg falharam. O feed é inválido ou os pacotes necessários foram removidos enquanto a operação atual estava em andamento. Verifique se o pacote existe no feed e tente novamente.",
+      "projectPath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "filePath": "C:\\Users\\daf21\\projetos\\CutoverPlanner\\src\\CutoverPlanner.Web\\CutoverPlanner.Web.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
