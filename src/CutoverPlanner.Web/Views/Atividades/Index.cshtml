@@ -7,6 +7,11 @@
 <h2>Atividades</h2>
 <div class="mb-2">
     <a class="btn btn-primary" href="/Atividades/Criar">+ Nova Atividade</a>
+    @{
+        var queryString = ViewContext.HttpContext.Request.QueryString.ToString();
+        var exportUrl = "/Atividades/ExportarExcel" + queryString;
+    }
+    <a class="btn btn-success" href="@exportUrl">📥 Exportar Excel</a>
     <form method="post" action="/Atividades/ExcluirTodas" style="display:inline" onsubmit="return confirm('Tem certeza que deseja excluir todas as atividades?');">
         @Html.AntiForgeryToken()
         <button type="submit" class="btn btn-danger ms-2">Excluir Todas</button>
