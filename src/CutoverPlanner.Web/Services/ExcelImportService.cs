@@ -1,7 +1,6 @@
-
+using ClosedXML.Excel;
 using CutoverPlanner.Web.Data;
 using CutoverPlanner.Web.Models;
-using ClosedXML.Excel;
 using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Services
@@ -146,17 +145,20 @@ namespace CutoverPlanner.Web.Services
             s = (s ?? string.Empty).Trim().ToUpperInvariant();
             return s == "SIM" || s == "YES" || s == "Y" || s == "TRUE" || s == "1";
         }
+
         private static bool? ParseNullableBool(string s)
         {
             if (string.IsNullOrWhiteSpace(s)) return null;
             return NormalizeBool(s);
         }
+
         private static DateTime? GetDateTimeOrNull(IXLCell cell)
         {
             if (cell.DataType == XLDataType.DateTime && !cell.IsEmpty()) return cell.GetDateTime();
             if (DateTime.TryParse(cell.GetString(), out var dt)) return dt;
             return null;
         }
+
         private static StatusAtividade ParseStatus(string s)
         {
             s = (s ?? string.Empty).Trim().ToUpperInvariant();

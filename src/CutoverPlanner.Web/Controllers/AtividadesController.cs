@@ -1,4 +1,3 @@
-
 using CutoverPlanner.Web.Data;
 using CutoverPlanner.Web.Models;
 using CutoverPlanner.Web.Services;
@@ -16,7 +15,7 @@ namespace CutoverPlanner.Web.Controllers
         public AtividadesController(AppDbContext db, CriticalPathService cp, IConfiguration cfg)
         { _db = db; _cp = cp; _cfg = cfg; }
 
-        public async Task<IActionResult> Index(string? status, string? sistema, string? area, string? responsavel, string? busca)
+        public async Task<IActionResult> Index(string? status, string? sistema, string? area, string? responsavel, string? busca, bool? atrasadas)
         {
             // Aplica filtro padrão quando nenhum parâmetro é enviado
             if (Request.Query.Count == 0)
@@ -37,7 +36,15 @@ namespace CutoverPlanner.Web.Controllers
             if (!string.IsNullOrWhiteSpace(area)) qq = qq.Where(a => a.AreaExecutoraNome!.Contains(area));
             if (!string.IsNullOrWhiteSpace(responsavel)) qq = qq.Where(a => a.Responsavel!.Contains(responsavel));
             if (!string.IsNullOrWhiteSpace(busca)) qq = qq.Where(a => (a.Titulo != null && a.Titulo.Contains(busca)) || (a.Observacao != null && a.Observacao.Contains(busca)));
+            if (atrasadas == true)
+            {
+                var today = DateTime.Today;
+                qq = qq.Where(a => a.Status != StatusAtividade.Concluido
+                                    && a.End.HasValue
+                                    && a.End.Value.Date < today);
+            }
             var itens = await qq.OrderBy(a => a.Start ?? DateTime.MaxValue).ToListAsync();
+            ViewBag.AtrasadasFilter = atrasadas;
             return View(itens);
         }
 
@@ -47,6 +54,13 @@ namespace CutoverPlanner.Web.Controllers
                 .Include(x => x.Predecessoras).ThenInclude(d => d.Predecessora)
                 .FirstOrDefaultAsync(x => x.Id == id);
             if (a == null) return NotFound();
+            
+            // Capture the referrer URL for back button, default to Index
+            var backUrl = Request.Headers["Referer"].ToString();
+            if (string.IsNullOrWhiteSpace(backUrl))
+                backUrl = "/Atividades";
+            ViewBag.BackUrl = backUrl;
+            
             return View(a);
         }
 
@@ -54,6 +68,7 @@ namespace CutoverPlanner.Web.Controllers
         public IActionResult Criar() => View(new Atividade());
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Criar(Atividade model)
         {
             if (!ModelState.IsValid) return View(model);
@@ -70,6 +85,7 @@ namespace CutoverPlanner.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editar(Atividade model)
         {
             if (!ModelState.IsValid) return View(model);
@@ -79,14 +95,45 @@ namespace CutoverPlanner.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Excluir(int id)
         {
+            // remove relationship records first so FK won't block
+            var deps = await _db.AtividadeDependencias
+                                 .Where(d => d.AtividadeId == id || d.PredecessoraId == id)
+                                 .ToListAsync();
+            if (deps.Any())
+            {
+                _db.AtividadeDependencias.RemoveRange(deps);
+            }
+
             var a = await _db.Atividades.FindAsync(id);
             if (a != null)
             {
                 _db.Atividades.Remove(a);
-                await _db.SaveChangesAsync();
             }
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ExcluirTodas()
+        {
+            // delete all dependency records first to avoid FK violations
+            var allDeps = await _db.AtividadeDependencias.ToListAsync();
+            if (allDeps.Any())
+            {
+                _db.AtividadeDependencias.RemoveRange(allDeps);
+            }
+
+            // then remove all activities
+            var todas = await _db.Atividades.ToListAsync();
+            if (todas.Any())
+            {
+                _db.Atividades.RemoveRange(todas);
+            }
+            await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

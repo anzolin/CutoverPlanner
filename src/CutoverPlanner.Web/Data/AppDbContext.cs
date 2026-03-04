@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using CutoverPlanner.Web.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Data
 {
