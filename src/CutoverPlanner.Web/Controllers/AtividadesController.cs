@@ -32,15 +32,21 @@ namespace CutoverPlanner.Web.Controllers
                 var defArea = _cfg["DefaultFilter:AreaExecutora"]; // GEAD/OPERAÇÃO DESPACHO
                 var defStatusNot = _cfg["DefaultFilter:StatusNot"];  // Concluido
                 var itensDef = await _repo.GetFilteredAsync(null, null, defArea, null, null, null);
+                
                 if (!string.IsNullOrWhiteSpace(defStatusNot) && Enum.TryParse<StatusAtividade>(defStatusNot, out var stn))
                     itensDef = itensDef.Where(a => a.Status != stn).ToList();
 
-                ViewBag.DefaultApplied = true; ViewBag.DefArea = defArea; ViewBag.DefStatusNot = defStatusNot;
+                ViewBag.DefaultApplied = true;
+                ViewBag.DefArea = defArea;
+                ViewBag.DefStatusNot = defStatusNot;
+
                 return View(itensDef);
             }
 
-            var itens = await _repo.GetFilteredAsync(status, sistema, area, responsavel, busca, atrasadas);
             ViewBag.AtrasadasFilter = atrasadas;
+
+            var itens = await _repo.GetFilteredAsync(status, sistema, area, responsavel, busca, atrasadas);
+            
             return View(itens);
         }
 

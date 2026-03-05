@@ -12,13 +12,6 @@ namespace CutoverPlanner.Web.Models
         public string? Milestone { get; set; }
         [Required]
         public string Titulo { get; set; } = string.Empty;
-        public string? Categoria { get; set; }
-        public bool RequerTestePerformance { get; set; }
-        public string? TipoTeste { get; set; }
-        public string? Procedimento { get; set; }
-        public string? Metricas { get; set; }
-        public string? CriterioAceite { get; set; }
-        public string? Evidencias { get; set; }
         public string? Responsavel { get; set; }
         public string? AreaExecutoraNome { get; set; }
         public string? Executor { get; set; }

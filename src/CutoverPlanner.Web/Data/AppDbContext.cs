@@ -1,5 +1,6 @@
 using CutoverPlanner.Web.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace CutoverPlanner.Web.Data
 {
@@ -10,6 +11,12 @@ namespace CutoverPlanner.Web.Data
         public DbSet<AreaExecutora> AreasExecutoras => Set<AreaExecutora>();
         public DbSet<Models.Endpoint> Endpoints => Set<Models.Endpoint>();
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

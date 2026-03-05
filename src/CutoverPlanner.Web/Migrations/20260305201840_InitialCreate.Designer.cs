@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CutoverPlanner.Web.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260222135026_InitialCreate")]
+    [Migration("20260305201840_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -60,16 +60,7 @@ namespace CutoverPlanner.Web.Migrations
                     b.Property<string>("AreaExecutoraNome")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Categoria")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CriterioAceite")
-                        .HasColumnType("TEXT");
-
                     b.Property<DateTime?>("End")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Evidencias")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Executor")
@@ -81,9 +72,6 @@ namespace CutoverPlanner.Web.Migrations
                     b.Property<string>("LinkRepositorio")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Metricas")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Milestone")
                         .HasColumnType("TEXT");
 
@@ -93,16 +81,10 @@ namespace CutoverPlanner.Web.Migrations
                     b.Property<string>("PredecessorasRaw")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Procedimento")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("RequerTestePerformance")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Responsavel")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool?>("RiscoGoLive")
+                    b.Property<bool>("RiscoGoLive")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Sistema")
@@ -113,9 +95,6 @@ namespace CutoverPlanner.Web.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("TipoTeste")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
                         .IsRequired()

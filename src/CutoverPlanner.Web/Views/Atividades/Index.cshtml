@@ -109,6 +109,12 @@
                 }
               </td>
               <td>
+
+                @* <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-primary">Editar</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+                </div> *@
+
                 <a class="btn btn-sm btn-outline-primary" href="/Atividades/Editar/@a.Id">Editar</a>
                 <form method="post" action="/Atividades/Excluir/@a.Id" style="display:inline" onsubmit="return confirm('Excluir?');">
                   <button class="btn btn-sm btn-outline-danger">Excluir</button>
