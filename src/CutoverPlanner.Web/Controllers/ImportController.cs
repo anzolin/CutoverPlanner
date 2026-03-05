@@ -5,8 +5,8 @@ namespace CutoverPlanner.Web.Controllers
 {
     public class ImportController : Controller
     {
-        private readonly ExcelImportService _import;
-        public ImportController(ExcelImportService import) => _import = import;
+        private readonly IExcelImportService _import;
+        public ImportController(IExcelImportService import) => _import = import;
 
         [HttpGet]
         public IActionResult Index() => View();

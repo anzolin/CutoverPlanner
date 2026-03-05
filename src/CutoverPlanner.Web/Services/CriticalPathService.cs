@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Services
 {
-    public class CriticalPathService
+    public class CriticalPathService : ICriticalPathService
     {
         private readonly AppDbContext _db;
         public CriticalPathService(AppDbContext db) => _db = db;

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Services
 {
-    public class ExcelImportService
+    public class ExcelImportService : IExcelImportService
     {
         private readonly AppDbContext _db;
         public ExcelImportService(AppDbContext db) => _db = db;

@@ -19,7 +19,7 @@
   <dt class="col-sm-3">Área</dt><dd class="col-sm-9">@Model.AreaExecutoraNome</dd>
   <dt class="col-sm-3">Executor</dt><dd class="col-sm-9">@Model.Executor</dd>
   <dt class="col-sm-3">Status</dt><dd class="col-sm-9">@Model.Status</dd>
-  <dt class="col-sm-3">Risco Go-live</dt><dd class="col-sm-9">@(Model.RiscoGoLive == true ? "Sim" : Model.RiscoGoLive == false ? "Não" : "-")</dd>
+  <dt class="col-sm-3">Risco Go-live</dt><dd class="col-sm-9">@(Model.RiscoGoLive ? "Sim" : "Não")</dd>
   <dt class="col-sm-3">Início</dt><dd class="col-sm-9">@Model.Start?.ToString("dd/MM/yyyy HH:mm")</dd>
   <dt class="col-sm-3">Fim</dt><dd class="col-sm-9">@Model.End?.ToString("dd/MM/yyyy HH:mm")</dd>
   <dt class="col-sm-3">Observação</dt><dd class="col-sm-9">@Model.Observacao</dd>
