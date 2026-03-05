@@ -23,7 +23,7 @@ namespace CutoverPlanner.Web.Models
         public string? AreaExecutoraNome { get; set; }
         public string? Executor { get; set; }
         public StatusAtividade Status { get; set; }
-        public bool? RiscoGoLive { get; set; }
+        public bool RiscoGoLive { get; set; }
         public DateTime? Start { get; set; }
         public DateTime? End { get; set; }
         public string? Observacao { get; set; }

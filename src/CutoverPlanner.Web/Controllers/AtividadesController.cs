@@ -218,7 +218,7 @@ namespace CutoverPlanner.Web.Controllers
                     ws.Cell(rowNum, 14).Value = a.AreaExecutoraNome ?? "";
                     ws.Cell(rowNum, 15).Value = a.Executor ?? "";
                     ws.Cell(rowNum, 16).Value = a.Status.ToString();
-                    ws.Cell(rowNum, 17).Value = a.RiscoGoLive.HasValue ? (a.RiscoGoLive.Value ? "Sim" : "Não") : "";
+                    ws.Cell(rowNum, 17).Value = a.RiscoGoLive ? "Sim" : "Não";
                     ws.Cell(rowNum, 18).Value = a.Start.HasValue ? a.Start.Value.ToString("dd/MM/yyyy") : "";
                     ws.Cell(rowNum, 19).Value = a.End.HasValue ? a.End.Value.ToString("dd/MM/yyyy") : "";
                     ws.Cell(rowNum, 20).Value = a.Observacao ?? "";

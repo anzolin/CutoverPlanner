@@ -43,7 +43,7 @@ namespace CutoverPlanner.Web.Services
                     AreaExecutoraNome = ws1.Cell(r, GetCol(ws1, "ÁREA EXECUTORA")).GetString(),
                     Executor = ws1.Cell(r, GetCol(ws1, "EXECUTOR")).GetString(),
                     Status = ParseStatus(ws1.Cell(r, GetCol(ws1, "STATUS")).GetString()),
-                    RiscoGoLive = ParseNullableBool(ws1.Cell(r, GetCol(ws1, "Risco Go-live")).GetString()),
+                    RiscoGoLive = NormalizeBool(ws1.Cell(r, GetCol(ws1, "Risco Go-live")).GetString()),
                     Start = GetDateTimeOrNull(ws1.Cell(r, GetCol(ws1, "START"))),
                     End = GetDateTimeOrNull(ws1.Cell(r, GetCol(ws1, "END"))),
                     Observacao = ws1.Cell(r, GetCol(ws1, "OBSERVAÇÃO")).GetString(),
