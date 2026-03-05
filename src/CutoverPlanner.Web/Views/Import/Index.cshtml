@@ -2,10 +2,27 @@
 @{
     ViewData["Title"] = "Importar Planilha";
 }
-<h2>Importar Planilha (.xlsx)</h2>
-<form method="post" enctype="multipart/form-data" action="/Import/Upload">
-  <input type="file" name="file" accept=".xlsx" class="form-control w-50" />
-  <button class="btn btn-primary mt-2" type="submit">Importar</button>
-</form>
-@if (TempData["Msg"] != null) { <div class="alert alert-success mt-2">@TempData["Msg"]</div> }
-@if (TempData["Error"] != null) { <div class="alert alert-danger mt-2">@TempData["Error"]</div> }
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Importar Planilha (.xlsx)</h3>
+  </div>
+  <div class="card-body">
+    <form method="post" enctype="multipart/form-data" action="/Import/Upload">
+      <div class="mb-3">
+        <label for="file" class="form-label">Selecione o arquivo Excel (.xlsx)</label>
+        <input type="file" name="file" id="file" accept=".xlsx" class="form-control" />
+      </div>
+      <button class="btn btn-primary" type="submit">
+        <i class="bi bi-upload"></i> Importar
+      </button>
+    </form>
+    @if (TempData["Msg"] != null)
+    {
+      <div class="alert alert-success mt-3">@TempData["Msg"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+      <div class="alert alert-danger mt-3">@TempData["Error"]</div>
+    }
+  </div>
+</div>
