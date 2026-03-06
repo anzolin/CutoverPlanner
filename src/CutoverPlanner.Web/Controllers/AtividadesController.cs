@@ -56,8 +56,10 @@ namespace CutoverPlanner.Web.Controllers
             if (a == null) return NotFound();
 
             var backUrl = Request.Headers["Referer"].ToString();
+
             if (string.IsNullOrWhiteSpace(backUrl))
                 backUrl = "/Atividades";
+
             ViewBag.BackUrl = backUrl;
 
             return View(a);
@@ -71,7 +73,9 @@ namespace CutoverPlanner.Web.Controllers
         public async Task<IActionResult> Criar(Atividade model)
         {
             if (!ModelState.IsValid) return View(model);
+            
             await _repo.AddAsync(model);
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -79,6 +83,7 @@ namespace CutoverPlanner.Web.Controllers
         public async Task<IActionResult> Editar(int id)
         {
             var a = await _repo.FindAsync(id);
+
             return a == null ? NotFound() : View(a);
         }
 
@@ -87,7 +92,9 @@ namespace CutoverPlanner.Web.Controllers
         public async Task<IActionResult> Editar(Atividade model)
         {
             if (!ModelState.IsValid) return View(model);
+
             await _repo.UpdateAsync(model);
+            
             return RedirectToAction(nameof(Index));
         }
 
@@ -96,10 +103,12 @@ namespace CutoverPlanner.Web.Controllers
         public async Task<IActionResult> Excluir(int id)
         {
             var a = await _repo.FindAsync(id);
+
             if (a != null)
             {
                 await _repo.DeleteAsync(a);
             }
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -108,6 +117,7 @@ namespace CutoverPlanner.Web.Controllers
         public async Task<IActionResult> ExcluirTodas()
         {
             await _repo.DeleteAllAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -124,6 +134,7 @@ namespace CutoverPlanner.Web.Controllers
         {
             var itens = await _repo.GetFilteredAsync(status, sistema, area, responsavel, busca, atrasadas);
             var (content, fileName) = await _exporter.ExportAsync(itens);
+            
             return File(content,
                         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                         fileName);

@@ -83,7 +83,7 @@
       </div>
     </form>
     <div class="table-responsive">
-      <table class="table table-sm table-striped">
+      <table class="table table-sm table-hover">
         <thead>
           <tr>
             <th>ID</th><th>Sistema</th><th>Título</th><th>Área</th><th>Status</th><th>Start</th><th>End</th><th>Atraso (dias)</th><th></th>
@@ -97,7 +97,21 @@
               <td>@a.Sistema</td>
               <td><a href="/Atividades/Detalhes/@a.Id">@a.Titulo</a></td>
               <td>@a.AreaExecutoraNome</td>
-              <td>@a.Status</td>
+              <td>
+                @if (a.Status == StatusAtividade.Concluido)
+                {
+                  <span class="badge bg-success">@a.Status</span>
+                }
+                else if (a.Status == StatusAtividade.EmAndamento)
+                {
+                  <span class="badge bg-info">@a.Status</span>
+                }
+                else
+                {
+                  <span class="badge bg-danger">@a.Status</span>
+                  
+                }
+              </td>
               <td>@a.Start?.ToString("dd/MM/yyyy")</td>
               <td>@a.End?.ToString("dd/MM/yyyy")</td>
               <td>
@@ -110,15 +124,13 @@
               </td>
               <td>
 
-                @* <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">Editar</button>
-                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                </div> *@
-
-                <a class="btn btn-sm btn-outline-primary" href="/Atividades/Editar/@a.Id">Editar</a>
-                <form method="post" action="/Atividades/Excluir/@a.Id" style="display:inline" onsubmit="return confirm('Excluir?');">
-                  <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                </form>
+                <div class="btn-group" role="group">
+                  <a class="btn btn-sm btn-outline-primary" href="/Atividades/Editar/@a.Id"><i class="bi bi-pencil"></i></a>
+                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="if(confirm('Excluir?')) { document.getElementById('form-delete-@a.Id').submit(); }"><i class="bi bi-trash"></i></button>
+                  <form id="form-delete-@a.Id" method="post" action="/Atividades/Excluir/@a.Id" style="display:none;">
+                    @Html.AntiForgeryToken()
+                  </form>
+                </div>
               </td>
             </tr>
           }
