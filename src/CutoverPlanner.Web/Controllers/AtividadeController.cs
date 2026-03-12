@@ -50,7 +50,8 @@ namespace CutoverPlanner.Web.Controllers
 
             var dataHoraAgora = DateTime.Now;
 
-            return View(new Atividade() { Inicio = dataHoraAgora.AddDays(1), Termino = dataHoraAgora.AddDays(8) });
+            // default status should use the existing enum values
+            return View(new Atividade() { Status = Domain.Enumerations.StatusAtividade.NaoIniciado, Inicio = dataHoraAgora.AddDays(1), Termino = dataHoraAgora.AddDays(8) });
         }
 
         [HttpPost]

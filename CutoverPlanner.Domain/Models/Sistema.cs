@@ -7,10 +7,13 @@ namespace CutoverPlanner.Domain.Models
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
         public int IdArea { get; set; }
+
         [ForeignKey("IdArea")]
-        public Area Area { get; set; } = null!;
+        public Area? Area { get; set; } = null!;
+
         [Required]
         public string Nome { get; set; } = string.Empty;
 

@@ -17,7 +17,13 @@ namespace CutoverPlanner.Web.Repositories
 
         public async Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas)
         {
-            var qq = _db.Atividades.AsNoTracking().AsQueryable();
+            // eagerly load related entities so their names are available in views
+            var qq = _db.Atividades
+                        .AsNoTracking()
+                        .Include(a => a.Executor).ThenInclude(e => e.Area)
+                        .Include(a => a.Sistema)
+                        .Include(a => a.Marco)
+                        .AsQueryable();
             if (!string.IsNullOrWhiteSpace(status) && Enum.TryParse<StatusAtividade>(status, out var st))
                 qq = qq.Where(a => a.Status == st);
             if (!string.IsNullOrWhiteSpace(sistema)) qq = qq.Where(a => a.Sistema!.Nome.Contains(sistema));
@@ -37,7 +43,14 @@ namespace CutoverPlanner.Web.Repositories
             return await qq.OrderBy(a => a.Inicio ?? DateTime.MaxValue).ToListAsync();
         }
 
-        public async Task<Atividade?> FindAsync(int id) => await _db.Atividades.FindAsync(id);
+        public async Task<Atividade?> FindAsync(int id)
+        {
+            return await _db.Atividades
+                        .Include(a => a.Executor).ThenInclude(e => e.Area)
+                        .Include(a => a.Sistema)
+                        .Include(a => a.Marco)
+                        .FirstOrDefaultAsync(a => a.Id == id);
+        }
 
         public async Task AddAsync(Atividade atividade)
         {
@@ -72,6 +85,14 @@ namespace CutoverPlanner.Web.Repositories
             await _db.SaveChangesAsync();
         }
 
-        public async Task<List<Atividade>> GetAllAsync() => await _db.Atividades.AsNoTracking().ToListAsync();
+        public async Task<List<Atividade>> GetAllAsync()
+        {
+            return await _db.Atividades
+                        .AsNoTracking()
+                        .Include(a => a.Executor).ThenInclude(e => e.Area)
+                        .Include(a => a.Sistema)
+                        .Include(a => a.Marco)
+                        .ToListAsync();
+        }
     }
 }

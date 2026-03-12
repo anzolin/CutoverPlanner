@@ -8,9 +8,8 @@
 
 <form asp-action="Create" method="post">
     <div class="form-group">
-        <label asp-for="Titulo"></label>
-        <input asp-for="Titulo" class="form-control" />
-        <span asp-validation-for="Titulo" class="text-danger"></span>
+        <label asp-for="IdMarco">Marco</label>
+        <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
     </div>
     <div class="form-group">
         <label asp-for="IdSistema">Sistema</label>
@@ -20,14 +19,13 @@
         <label asp-for="IdExecutor">Executor</label>
         <select asp-for="IdExecutor" class="form-control" asp-items="ViewBag.Executores"></select>
     </div>
-    <div class="form-group">
-        <label asp-for="IdMarco">Marco</label>
-        <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
+        <div class="form-group">
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="Status"></label>
-        <select asp-for="Status" class="form-control"></select>
-    </div>
+    @* status should not be chosen by the user during creation, keep it hidden *@
+    <input asp-for="Status" type="hidden" />
     <div class="form-group">
         <label asp-for="Inicio"></label>
         <input asp-for="Inicio" type="datetime-local" class="form-control" />
@@ -39,6 +37,10 @@
     <div class="form-group">
         <label asp-for="Observacao"></label>
         <textarea asp-for="Observacao" class="form-control"></textarea>
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" asp-for="RiscoGoLive" class="form-check-input" />
+        <label class="form-check-label" asp-for="RiscoGoLive">Risco Go Live</label>
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>

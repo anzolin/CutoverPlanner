@@ -27,14 +27,16 @@
     <a asp-action="Create" class="btn btn-primary">Nova Atividade</a>
 </p>
 
-<table class="table">
+<table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Título</th>
-            <th>Sistema</th>
-            <th>Executor</th>
             <th>Marco</th>
+            <th>Sistema</th>
+            <th>Título</th>
+            <th>Executor</th>
+            <th>Início</th>
+            <th>Término</th>
+            <th>Atraso (dias)</th>
             <th>Status</th>
             <th></th>
         </tr>
@@ -43,12 +45,43 @@
 @foreach (var item in Model)
 {
         <tr>
-            <td>@item.Id</td>
-            <td>@item.Titulo</td>
-            <td>@item.Sistema?.Nome</td>
-            <td>@item.Executor?.Nome</td>
             <td>@item.Marco?.Nome</td>
-            <td>@item.Status</td>
+            <td>@item.Sistema?.Nome</td>
+            <td>@item.Titulo</td>
+            <td>
+                @item.Executor?.Nome
+                @if(item.Executor?.Area?.Nome != null)
+                {
+                    <br />
+                    <small><strong>@item.Executor?.Area?.Nome</strong></small>
+                    <br />
+                    <small>@item.Executor?.Area?.NomeResponsavel</small>
+                }
+            </td>
+            <td>@item.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
+            <td>@item.Termino?.ToString("dd/MM/yyyy HH:mm")</td>
+              <td>
+                @if (item.Status != StatusAtividade.Concluido && item.Termino.HasValue && item.Termino.Value.Date < DateTime.Today)
+                {
+                  var dias = (DateTime.Today - item.Termino.Value.Date).Days;
+                  <span class="badge bg-danger">@dias</span>
+                }
+              </td>
+            <td>
+                @if (item.Status == StatusAtividade.Concluido)
+                {
+                  <span class="badge bg-success">@item.Status</span>
+                }
+                else if (item.Status == StatusAtividade.EmAndamento)
+                {
+                  <span class="badge bg-info">@item.Status</span>
+                }
+                else
+                {
+                  <span class="badge bg-danger">@item.Status</span>
+                  
+                }
+            </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |

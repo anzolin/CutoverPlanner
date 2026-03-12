@@ -9,9 +9,8 @@
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
-        <label asp-for="Titulo"></label>
-        <input asp-for="Titulo" class="form-control" />
-        <span asp-validation-for="Titulo" class="text-danger"></span>
+        <label asp-for="IdMarco">Marco</label>
+        <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
     </div>
     <div class="form-group">
         <label asp-for="IdSistema">Sistema</label>
@@ -22,8 +21,9 @@
         <select asp-for="IdExecutor" class="form-control" asp-items="ViewBag.Executores"></select>
     </div>
     <div class="form-group">
-        <label asp-for="IdMarco">Marco</label>
-        <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Status"></label>
@@ -40,6 +40,10 @@
     <div class="form-group">
         <label asp-for="Observacao"></label>
         <textarea asp-for="Observacao" class="form-control"></textarea>
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" asp-for="RiscoGoLive" class="form-check-input" />
+        <label class="form-check-label" asp-for="RiscoGoLive">Risco Go Live</label>
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
     <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
