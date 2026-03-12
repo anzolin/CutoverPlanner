@@ -1,6 +1,6 @@
 using CutoverPlanner.Web.Data;
-using CutoverPlanner.Web.Services;
 using CutoverPlanner.Web.Repositories;
+using CutoverPlanner.Web.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,12 +10,15 @@ builder.Services.AddDbContext<AppDbContext>(opts =>
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IExcelImportService, CutoverPlanner.Web.Services.ExcelImportService>();
-builder.Services.AddScoped<ICriticalPathService, CutoverPlanner.Web.Services.CriticalPathService>();
+builder.Services.AddScoped<IAreaService, AreaService>();
+builder.Services.AddScoped<IExecutorService, ExecutorService>();
 
 // repository and exporter abstractions used by controllers
-builder.Services.AddScoped<CutoverPlanner.Web.Repositories.IAtividadeRepository, CutoverPlanner.Web.Repositories.AtividadeRepository>();
-builder.Services.AddScoped<CutoverPlanner.Web.Services.IAtividadeExcelExporter, CutoverPlanner.Web.Services.AtividadeExcelExporter>();
+builder.Services.AddScoped<IAreaRepository, AreaRepository>();
+builder.Services.AddScoped<IAtividadeRepository, AtividadeRepository>();
+builder.Services.AddScoped<IExecutorRepository, ExecutorRepository>();
+builder.Services.AddScoped<IMarcoRepository, MarcoRepository>();
+builder.Services.AddScoped<ISistemaRepository, SistemaRepository>();
 
 var app = builder.Build();
 

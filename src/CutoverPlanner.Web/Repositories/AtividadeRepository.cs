@@ -1,5 +1,6 @@
+using CutoverPlanner.Domain.Enumerations;
+using CutoverPlanner.Domain.Models;
 using CutoverPlanner.Web.Data;
-using CutoverPlanner.Web.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Repositories
@@ -14,15 +15,15 @@ namespace CutoverPlanner.Web.Repositories
 
         public AtividadeRepository(AppDbContext db) => _db = db;
 
-        public async Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema,
-            string? area, string? responsavel, string? busca, bool? atrasadas)
+        public async Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas)
         {
             var qq = _db.Atividades.AsNoTracking().AsQueryable();
             if (!string.IsNullOrWhiteSpace(status) && Enum.TryParse<StatusAtividade>(status, out var st))
                 qq = qq.Where(a => a.Status == st);
-            if (!string.IsNullOrWhiteSpace(sistema)) qq = qq.Where(a => a.Sistema!.Contains(sistema));
-            if (!string.IsNullOrWhiteSpace(area)) qq = qq.Where(a => a.AreaExecutoraNome!.Contains(area));
-            if (!string.IsNullOrWhiteSpace(responsavel)) qq = qq.Where(a => a.Responsavel!.Contains(responsavel));
+            if (!string.IsNullOrWhiteSpace(sistema)) qq = qq.Where(a => a.Sistema!.Nome.Contains(sistema));
+            if (!string.IsNullOrWhiteSpace(area)) qq = qq.Where(a => a.Executor!.Area!.Nome.Contains(area));
+            if (!string.IsNullOrWhiteSpace(responsavelArea)) qq = qq.Where(a => a.Executor!.Area!.NomeResponsavel!.Contains(responsavelArea));
+            if (!string.IsNullOrWhiteSpace(executor)) qq = qq.Where(a => a.Executor!.Nome.Contains(executor));
             if (!string.IsNullOrWhiteSpace(busca))
                 qq = qq.Where(a => (a.Titulo != null && a.Titulo.Contains(busca)) ||
                                    (a.Observacao != null && a.Observacao.Contains(busca)));
@@ -30,55 +31,39 @@ namespace CutoverPlanner.Web.Repositories
             {
                 var today = DateTime.Today;
                 qq = qq.Where(a => a.Status != StatusAtividade.Concluido
-                                    && a.End.HasValue
-                                    && a.End.Value.Date < today);
+                                    && a.Termino.HasValue
+                                    && a.Termino.Value.Date < today);
             }
-            return await qq.OrderBy(a => a.Start ?? DateTime.MaxValue).ToListAsync();
+            return await qq.OrderBy(a => a.Inicio ?? DateTime.MaxValue).ToListAsync();
         }
 
         public async Task<Atividade?> FindAsync(int id) => await _db.Atividades.FindAsync(id);
 
-        public async Task<Atividade?> GetWithDependenciesAsync(int id)
-            => await _db.Atividades
-                         .Include(x => x.Predecessoras).ThenInclude(d => d.Predecessora)
-                         .FirstOrDefaultAsync(x => x.Id == id);
-
         public async Task AddAsync(Atividade atividade)
         {
             _db.Atividades.Add(atividade);
+
             await _db.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(Atividade atividade)
         {
             _db.Atividades.Update(atividade);
+
             await _db.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(Atividade atividade)
         {
-            // remove dependency records first so FK won't block
-            var deps = await _db.AtividadeDependencias
-                                 .Where(d => d.AtividadeId == atividade.Id || d.PredecessoraId == atividade.Id)
-                                 .ToListAsync();
-            if (deps.Any())
-            {
-                _db.AtividadeDependencias.RemoveRange(deps);
-            }
-
             _db.Atividades.Remove(atividade);
+
             await _db.SaveChangesAsync();
         }
 
         public async Task DeleteAllAsync()
         {
-            var allDeps = await _db.AtividadeDependencias.ToListAsync();
-            if (allDeps.Any())
-            {
-                _db.AtividadeDependencias.RemoveRange(allDeps);
-            }
-
             var todas = await _db.Atividades.ToListAsync();
+
             if (todas.Any())
             {
                 _db.Atividades.RemoveRange(todas);

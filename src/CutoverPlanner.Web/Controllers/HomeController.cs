@@ -1,5 +1,5 @@
+using CutoverPlanner.Domain.Enumerations;
 using CutoverPlanner.Web.Data;
-using CutoverPlanner.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CutoverPlanner.Web.Controllers
@@ -14,7 +14,7 @@ namespace CutoverPlanner.Web.Controllers
             var concl = _db.Atividades.Count(a => a.Status == StatusAtividade.Concluido);
             var emAnd = _db.Atividades.Count(a => a.Status == StatusAtividade.EmAndamento);
             var naoIni = total - concl - emAnd;
-            var riscos = _db.Atividades.Where(a => a.RiscoGoLive == true).OrderBy(a => a.Start).Take(10).ToList();
+            var riscos = _db.Atividades.Where(a => a.RiscoGoLive == true).OrderBy(a => a.Inicio).Take(10).ToList();
             
             ViewBag.Total = total;
             ViewBag.Concl = concl;

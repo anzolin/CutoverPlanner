@@ -1,7 +1,6 @@
+﻿using System.ComponentModel.DataAnnotations;
 
-using System.ComponentModel.DataAnnotations;
-
-namespace CutoverPlanner.Web.Models
+namespace CutoverPlanner.Domain.Enumerations
 {
     public enum StatusAtividade
     {
