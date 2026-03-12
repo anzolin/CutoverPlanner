@@ -1,0 +1,50 @@
+@model CutoverPlanner.Domain.Models.Atividade
+
+@{
+    ViewData["Title"] = "Editar Atividade";
+}
+
+<h1>Editar Atividade</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Titulo"></label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IdSistema">Sistema</label>
+        <select asp-for="IdSistema" class="form-control" asp-items="ViewBag.Sistemas"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="IdExecutor">Executor</label>
+        <select asp-for="IdExecutor" class="form-control" asp-items="ViewBag.Executores"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="IdMarco">Marco</label>
+        <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Status"></label>
+        <select asp-for="Status" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Inicio"></label>
+        <input asp-for="Inicio" type="datetime-local" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Termino"></label>
+        <input asp-for="Termino" type="datetime-local" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Observacao"></label>
+        <textarea asp-for="Observacao" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

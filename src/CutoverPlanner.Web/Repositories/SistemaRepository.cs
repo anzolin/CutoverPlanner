@@ -1,37 +1,53 @@
 ﻿using CutoverPlanner.Domain.Models;
+using CutoverPlanner.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Repositories
 {
     public class SistemaRepository : ISistemaRepository
     {
-        public Task AddAsync(Sistema sistema)
+        private readonly AppDbContext _db;
+        public SistemaRepository(AppDbContext db) => _db = db;
+
+        public async Task AddAsync(Sistema sistema)
         {
-            throw new NotImplementedException();
+            _db.Sistemas.Add(sistema);
+            await _db.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var sistema = await _db.Sistemas.FindAsync(id);
+            if (sistema != null)
+            {
+                _db.Sistemas.Remove(sistema);
+                await _db.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Sistema>> GetAllAsync()
+        public async Task<IEnumerable<Sistema>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _db.Sistemas.AsNoTracking()
+                .Include(s => s.Area)
+                .ToListAsync();
         }
 
-        public Task<IEnumerable<Sistema>> GetByAreaIdAsync(int areaId)
+        public async Task<IEnumerable<Sistema>> GetByAreaIdAsync(int areaId)
         {
-            throw new NotImplementedException();
+            return await _db.Sistemas.AsNoTracking()
+                .Where(s => s.IdArea == areaId)
+                .ToListAsync();
         }
 
-        public Task<Sistema?> GetByIdAsync(int id)
+        public async Task<Sistema?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Sistemas.FindAsync(id);
         }
 
-        public Task UpdateAsync(Sistema sistema)
+        public async Task UpdateAsync(Sistema sistema)
         {
-            throw new NotImplementedException();
+            _db.Sistemas.Update(sistema);
+            await _db.SaveChangesAsync();
         }
     }
 }

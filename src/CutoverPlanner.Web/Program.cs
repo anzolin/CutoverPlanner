@@ -12,6 +12,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IAreaService, AreaService>();
 builder.Services.AddScoped<IExecutorService, ExecutorService>();
+builder.Services.AddScoped<ISistemaService, SistemaService>();
+builder.Services.AddScoped<IAtividadeService, AtividadeService>();
+builder.Services.AddScoped<IMarcoService, MarcoService>();
 
 // repository and exporter abstractions used by controllers
 builder.Services.AddScoped<IAreaRepository, AreaRepository>();

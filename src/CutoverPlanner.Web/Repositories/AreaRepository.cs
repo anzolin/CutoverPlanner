@@ -1,32 +1,44 @@
 ﻿using CutoverPlanner.Domain.Models;
+using CutoverPlanner.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Repositories
 {
     public class AreaRepository : IAreaRepository
     {
-        public Task AddAsync(Area area)
+        private readonly AppDbContext _db;
+        public AreaRepository(AppDbContext db) => _db = db;
+
+        public async Task AddAsync(Area area)
         {
-            throw new NotImplementedException();
+            _db.Areas.Add(area);
+            await _db.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var area = await _db.Areas.FindAsync(id);
+            if (area != null)
+            {
+                _db.Areas.Remove(area);
+                await _db.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Area>> GetAllAsync()
+        public async Task<IEnumerable<Area>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _db.Areas.AsNoTracking().ToListAsync();
         }
 
-        public Task<Area?> GetByIdAsync(int id)
+        public async Task<Area?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Areas.FindAsync(id);
         }
 
-        public Task UpdateAsync(Area area)
+        public async Task UpdateAsync(Area area)
         {
-            throw new NotImplementedException();
+            _db.Areas.Update(area);
+            await _db.SaveChangesAsync();
         }
     }
 }

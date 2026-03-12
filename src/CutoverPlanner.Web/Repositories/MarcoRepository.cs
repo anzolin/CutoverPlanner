@@ -1,32 +1,44 @@
 ﻿using CutoverPlanner.Domain.Models;
+using CutoverPlanner.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Repositories
 {
     public class MarcoRepository : IMarcoRepository
     {
-        public Task AddAsync(Marco marco)
+        private readonly AppDbContext _db;
+        public MarcoRepository(AppDbContext db) => _db = db;
+
+        public async Task AddAsync(Marco marco)
         {
-            throw new NotImplementedException();
+            _db.Marcos.Add(marco);
+            await _db.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var marco = await _db.Marcos.FindAsync(id);
+            if (marco != null)
+            {
+                _db.Marcos.Remove(marco);
+                await _db.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Marco>> GetAllAsync()
+        public async Task<IEnumerable<Marco>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _db.Marcos.AsNoTracking().ToListAsync();
         }
 
-        public Task<Marco?> GetByIdAsync(int id)
+        public async Task<Marco?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Marcos.FindAsync(id);
         }
 
-        public Task UpdateAsync(Marco marco)
+        public async Task UpdateAsync(Marco marco)
         {
-            throw new NotImplementedException();
+            _db.Marcos.Update(marco);
+            await _db.SaveChangesAsync();
         }
     }
 }

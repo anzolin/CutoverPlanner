@@ -1,0 +1,208 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid mt-4">
+    <h1 class="mb-4">Dashboard de Atividades</h1>
+
+    <!-- Cards de resumo -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h6 class="card-title text-muted">Total de Atividades</h6>
+                    <h2 class="card-text text-primary">@ViewBag.Total</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h6 class="card-title text-muted">Concluídas</h6>
+                    <h2 class="card-text text-success">@ViewBag.Concl</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-warning">
+                <div class="card-body">
+                    <h6 class="card-title text-muted">Em Andamento</h6>
+                    <h2 class="card-text text-warning">@ViewBag.EmAnd</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-danger">
+                <div class="card-body">
+                    <h6 class="card-title text-muted">Não Iniciadas</h6>
+                    <h2 class="card-text text-danger">@ViewBag.NaoIni</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progresso -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Progresso Geral</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Conclusão</span>
+                        <span class="badge bg-primary">@ViewBag.Pct%</span>
+                    </div>
+                    <div class="progress" style="height: 25px;">
+                        <div class="progress-bar bg-success" role="progressbar" 
+                             style="width: @ViewBag.Pct%" aria-valuenow="@ViewBag.Pct" 
+                             aria-valuemin="0" aria-valuemax="100">
+                            @ViewBag.Pct%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Distribuição</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="badge bg-success">@ViewBag.Concl</span>
+                            <strong>Concluídas</strong>
+                        </li>
+                        <li class="mb-2">
+                            <span class="badge bg-warning">@ViewBag.EmAnd</span>
+                            <strong>Em Andamento</strong>
+                        </li>
+                        <li>
+                            <span class="badge bg-danger">@ViewBag.NaoIni</span>
+                            <strong>Não Iniciadas</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Atividades com Risco -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0">⚠️ Atividades com Risco (Top 10)</h5>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Riscos != null && ViewBag.Riscos.Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Título</th>
+                                        <th>Sistema</th>
+                                        <th>Executor</th>
+                                        <th>Status</th>
+                                        <th>Início</th>
+                                        <th>Término</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var atividade in ViewBag.Riscos)
+                                    {
+                                        <tr class="table-danger">
+                                            <td>@atividade.Id</td>
+                                            <td>
+                                                <strong>@atividade.Titulo</strong>
+                                                @if (!string.IsNullOrEmpty(atividade.Observacao))
+                                                {
+                                                    <div class="small text-muted">@atividade.Observacao</div>
+                                                }
+                                            </td>
+                                            <td>@atividade.Sistema?.Nome</td>
+                                            <td>@atividade.Executor?.Nome</td>
+                                            <td>
+                                                <span class="badge bg-secondary">@atividade.Status</span>
+                                            </td>
+                                            <td>@atividade.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>
+                                                @if (atividade.Termino.HasValue)
+                                                {
+                                                    <span class="@(atividade.Termino.Value < DateTime.Now && atividade.Status.ToString() != "Concluido" ? "text-danger" : "")">
+                                                        @atividade.Termino.Value.ToString("dd/MM/yyyy HH:mm")
+                                                    </span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <a asp-controller="Atividade" asp-action="Edit" asp-route-id="@atividade.Id" 
+                                                   class="btn btn-sm btn-warning">Editar</a>
+                                                <a asp-controller="Atividade" asp-action="Details" asp-route-id="@atividade.Id" 
+                                                   class="btn btn-sm btn-info">Detalhes</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-success" role="alert">
+                            ✅ Nenhuma atividade com risco identificada!
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de ação -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="btn-group" role="group">
+                <a asp-controller="Atividade" asp-action="Index" class="btn btn-primary">
+                    📋 Todas as Atividades
+                </a>
+                <a asp-controller="Area" asp-action="Index" class="btn btn-outline-primary">
+                    🏢 Áreas
+                </a>
+                <a asp-controller="Sistema" asp-action="Index" class="btn btn-outline-primary">
+                    💻 Sistemas
+                </a>
+                <a asp-controller="Executor" asp-action="Index" class="btn btn-outline-primary">
+                    👥 Executores
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .progress {
+        background-color: #e9ecef;
+    }
+
+    .table-danger {
+        background-color: #f8d7da;
+    }
+
+    .badge {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+</style>

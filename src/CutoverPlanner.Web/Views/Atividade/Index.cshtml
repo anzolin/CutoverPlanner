@@ -1,0 +1,60 @@
+@model IEnumerable<CutoverPlanner.Domain.Models.Atividade>
+
+@{
+    ViewData["Title"] = "Atividades";
+}
+
+<h1>Atividades</h1>
+
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" name="busca" placeholder="Buscar..." value="@ViewData["busca"]" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="sistema" placeholder="Sistema..." value="@ViewData["sistema"]" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <input type="text" name="executor" placeholder="Executor..." value="@ViewData["executor"]" class="form-control" />
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </div>
+    </div>
+</form>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nova Atividade</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Título</th>
+            <th>Sistema</th>
+            <th>Executor</th>
+            <th>Marco</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Titulo</td>
+            <td>@item.Sistema?.Nome</td>
+            <td>@item.Executor?.Nome</td>
+            <td>@item.Marco?.Nome</td>
+            <td>@item.Status</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

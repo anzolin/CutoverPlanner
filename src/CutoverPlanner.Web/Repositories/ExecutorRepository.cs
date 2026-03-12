@@ -1,37 +1,53 @@
 ﻿using CutoverPlanner.Domain.Models;
+using CutoverPlanner.Web.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CutoverPlanner.Web.Repositories
 {
     public class ExecutorRepository : IExecutorRepository
     {
-        public Task AddAsync(Executor executor)
+        private readonly AppDbContext _db;
+        public ExecutorRepository(AppDbContext db) => _db = db;
+
+        public async Task AddAsync(Executor executor)
         {
-            throw new NotImplementedException();
+            _db.Executores.Add(executor);
+            await _db.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var executor = await _db.Executores.FindAsync(id);
+            if (executor != null)
+            {
+                _db.Executores.Remove(executor);
+                await _db.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Executor>> GetAllAsync()
+        public async Task<IEnumerable<Executor>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _db.Executores.AsNoTracking()
+                .Include(e => e.Area)
+                .ToListAsync();
         }
 
-        public Task<IEnumerable<Executor>> GetByAreaIdAsync(int areaId)
+        public async Task<IEnumerable<Executor>> GetByAreaIdAsync(int areaId)
         {
-            throw new NotImplementedException();
+            return await _db.Executores.AsNoTracking()
+                .Where(e => e.IdArea == areaId)
+                .ToListAsync();
         }
 
-        public Task<Executor?> GetByIdAsync(int id)
+        public async Task<Executor?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Executores.FindAsync(id);
         }
 
-        public Task UpdateAsync(Executor executor)
+        public async Task UpdateAsync(Executor executor)
         {
-            throw new NotImplementedException();
+            _db.Executores.Update(executor);
+            await _db.SaveChangesAsync();
         }
     }
 }
