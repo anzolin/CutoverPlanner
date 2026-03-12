@@ -17,7 +17,13 @@ namespace CutoverPlanner.Web.Models
         public string? Executor { get; set; }
         public StatusAtividade Status { get; set; }
         public bool RiscoGoLive { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = false)]
         public DateTime? Start { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy HH:mm}", ApplyFormatInEditMode = false)]
         public DateTime? End { get; set; }
         public string? Observacao { get; set; }
         public string? LinkRepositorio { get; set; }

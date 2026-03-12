@@ -66,7 +66,7 @@ namespace CutoverPlanner.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Criar() => View(new Atividade());
+        public IActionResult Criar() => View(new Atividade() { Start = DateTime.Now, End = DateTime.Now.AddDays(7) });
 
         [HttpPost]
         [ValidateAntiForgeryToken]

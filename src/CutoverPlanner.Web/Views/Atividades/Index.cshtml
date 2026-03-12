@@ -86,17 +86,27 @@
       <table class="table table-sm table-hover">
         <thead>
           <tr>
-            <th>ID</th><th>Sistema</th><th>Título</th><th>Área</th><th>Status</th><th>Start</th><th>End</th><th>Atraso (dias)</th><th></th>
+            <th>Sistema</th>
+            <th>Título</th>
+            <th>Responsável</th>
+            <th>Área</th>
+            <th>Executor</th>
+            <th>Status</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Atraso (dias)</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           @foreach (var a in Model)
           {
             <tr>
-              <td>@a.IdPlanilha</td>
               <td>@a.Sistema</td>
               <td><a href="/Atividades/Detalhes/@a.Id">@a.Titulo</a></td>
+              <td>@a.Responsavel</td>
               <td>@a.AreaExecutoraNome</td>
+              <td>@a.Executor</td>
               <td>
                 @if (a.Status == StatusAtividade.Concluido)
                 {
