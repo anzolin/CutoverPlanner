@@ -30,7 +30,6 @@
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th>Marco</th>
             <th>Sistema</th>
             <th>Título</th>
             <th>Executor</th>
@@ -42,10 +41,18 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model)
+@{
+    var grouped = Model.GroupBy(a => a.Marco?.Nome ?? "Sem Marco")
+                       .OrderBy(g => g.Key);
+}
+@foreach (var group in grouped)
 {
+    <tr class="table-secondary">
+        <td colspan="9"><strong>🎯 @group.Key</strong></td>
+    </tr>
+    @foreach (var item in group.OrderBy(a => a.Inicio ?? DateTime.MaxValue))
+    {
         <tr>
-            <td>@item.Marco?.Nome</td>
             <td>@item.Sistema?.Nome</td>
             <td>@item.Titulo</td>
             <td>
@@ -60,26 +67,28 @@
             </td>
             <td>@item.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
             <td>@item.Termino?.ToString("dd/MM/yyyy HH:mm")</td>
-              <td>
+            <td>
                 @if (item.Status != StatusAtividade.Concluido && item.Termino.HasValue && item.Termino.Value.Date < DateTime.Today)
                 {
                   var dias = (DateTime.Today - item.Termino.Value.Date).Days;
                   <span class="badge bg-danger">@dias</span>
                 }
-              </td>
+                else{
+                    <span>-</span>
+                }
+            </td>
             <td>
                 @if (item.Status == StatusAtividade.Concluido)
                 {
-                  <span class="badge bg-success">@item.Status</span>
+                  <span class="badge bg-success">Concluído</span>
                 }
                 else if (item.Status == StatusAtividade.EmAndamento)
                 {
-                  <span class="badge bg-info">@item.Status</span>
+                  <span class="badge bg-info">Em Andamento</span>
                 }
                 else
                 {
-                  <span class="badge bg-danger">@item.Status</span>
-                  
+                  <span class="badge bg-danger">Pendente</span>
                 }
             </td>
             <td>
@@ -88,6 +97,7 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
+    }
 }
     </tbody>
 </table>

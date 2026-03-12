@@ -43,7 +43,7 @@
 
     <!-- Progresso -->
     <div class="row mb-4">
-        <div class="col-md-8">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0">Progresso Geral</h5>
@@ -63,10 +63,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mb-0">Distribuição</h5>
+                    <h5 class="mb-0">Distribuição por Status</h5>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled">
@@ -82,6 +82,56 @@
                             <span class="badge bg-danger">@ViewBag.NaoIni</span>
                             <strong>Não Iniciadas</strong>
                         </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Distribuição por Área</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        @if (ViewBag.DistArea != null)
+                        {
+                            foreach (var entry in ViewBag.DistArea)
+                            {
+                                <li class="mb-2">
+                                    <span class="badge bg-primary">@entry.Count</span>
+                                    @entry.Name
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li>Nenhuma informação</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Distribuição por Marco</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        @if (ViewBag.DistMarco != null)
+                        {
+                            foreach (var entry in ViewBag.DistMarco)
+                            {
+                                <li class="mb-2">
+                                    <span class="badge bg-secondary">@entry.Count</span>
+                                    @entry.Name
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li>Nenhuma informação</li>
+                        }
                     </ul>
                 </div>
             </div>
