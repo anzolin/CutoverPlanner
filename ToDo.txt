@@ -1,0 +1,3 @@
+1) Incluir um filtro de pesquisa do tipo checkbox chamado Risco de GoLive que filtra somente as atividades com o campo RiscoGoLive igual a true.
+2) Incluir um filtro de pesquisa do tipo checkbox chamado Exibir Atrasadas que filtra somente as atividades com status diferente de concluido e que a data de termino seja anterior a data de hoje.
+3) Incluir um botão chamado Exportar Excel (cor verde) ao lado do botão nova atividade, que exporte para o Excel todas as colunas exibidas na tela levando em consideração o filtro aplicado.

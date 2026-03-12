@@ -54,7 +54,9 @@
     {
         <tr>
             <td>@item.Sistema?.Nome</td>
-            <td>@item.Titulo</td>
+            <td>
+                <strong>@item.Titulo</strong>
+            </td>
             <td>
                 @item.Executor?.Nome
                 @if(item.Executor?.Area?.Nome != null)

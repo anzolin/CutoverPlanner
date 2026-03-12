@@ -15,7 +15,7 @@ namespace CutoverPlanner.Web.Repositories
 
         public AtividadeRepository(AppDbContext db) => _db = db;
 
-        public async Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas)
+        public async Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas, bool? riscoGoLive)
         {
             // eagerly load related entities so their names are available in views
             var qq = _db.Atividades
@@ -39,6 +39,10 @@ namespace CutoverPlanner.Web.Repositories
                 qq = qq.Where(a => a.Status != StatusAtividade.Concluido
                                     && a.Termino.HasValue
                                     && a.Termino.Value.Date < today);
+            }
+            if (riscoGoLive == true)
+            {
+                qq = qq.Where(a => a.RiscoGoLive == true);
             }
             return await qq.OrderBy(a => a.Inicio ?? DateTime.MaxValue).ToListAsync();
         }
