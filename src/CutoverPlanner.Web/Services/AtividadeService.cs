@@ -1,6 +1,5 @@
 using CutoverPlanner.Domain.Models;
 using CutoverPlanner.Web.Repositories;
-using CutoverPlanner.Domain.Enumerations;
 
 namespace CutoverPlanner.Web.Services
 {
@@ -50,9 +49,10 @@ namespace CutoverPlanner.Web.Services
             string? responsavelArea,
             string? executor,
             string? busca,
-            bool? atrasadas)
+            bool? atrasadas,
+            bool? riscoGoLive)
         {
-            return await _repo.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas);
+            return await _repo.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas, riscoGoLive);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace CutoverPlanner.Web.Repositories
                         .Include(a => a.Sistema)
                         .Include(a => a.Marco)
                         .AsQueryable();
+
             if (!string.IsNullOrWhiteSpace(status) && Enum.TryParse<StatusAtividade>(status, out var st))
                 qq = qq.Where(a => a.Status == st);
             if (!string.IsNullOrWhiteSpace(sistema)) qq = qq.Where(a => a.Sistema!.Nome.Contains(sistema));
@@ -33,6 +34,7 @@ namespace CutoverPlanner.Web.Repositories
             if (!string.IsNullOrWhiteSpace(busca))
                 qq = qq.Where(a => (a.Titulo != null && a.Titulo.Contains(busca)) ||
                                    (a.Observacao != null && a.Observacao.Contains(busca)));
+
             if (atrasadas == true)
             {
                 var today = DateTime.Today;
@@ -40,10 +42,12 @@ namespace CutoverPlanner.Web.Repositories
                                     && a.Termino.HasValue
                                     && a.Termino.Value.Date < today);
             }
+
             if (riscoGoLive == true)
             {
                 qq = qq.Where(a => a.RiscoGoLive == true);
             }
+
             return await qq.OrderBy(a => a.Inicio ?? DateTime.MaxValue).ToListAsync();
         }
 

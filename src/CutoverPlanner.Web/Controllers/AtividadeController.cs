@@ -31,9 +31,10 @@ namespace CutoverPlanner.Web.Controllers
             string? responsavelArea,
             string? executor,
             string? busca,
-            bool? atrasadas)
+            bool? atrasadas,
+            bool? riscoGoLive)
         {
-            var list = await _atividadeService.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas);
+            var list = await _atividadeService.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas, riscoGoLive);
             return View(list);
         }
 

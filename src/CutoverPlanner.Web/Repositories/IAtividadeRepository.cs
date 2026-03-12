@@ -7,7 +7,7 @@ namespace CutoverPlanner.Web.Repositories
     /// </summary>
     public interface IAtividadeRepository
     {
-        Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas);
+        Task<List<Atividade>> GetFilteredAsync(string? status, string? sistema, string? area, string? responsavelArea, string? executor, string? busca, bool? atrasadas, bool? riscoGoLive);
         Task<Atividade?> FindAsync(int id);
         Task AddAsync(Atividade atividade);
         Task UpdateAsync(Atividade atividade);

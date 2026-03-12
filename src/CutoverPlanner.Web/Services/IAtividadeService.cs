@@ -19,6 +19,7 @@ namespace CutoverPlanner.Web.Services
             string? responsavelArea,
             string? executor,
             string? busca,
-            bool? atrasadas);
+            bool? atrasadas,
+            bool? riscoGoLive);
     }
 }
