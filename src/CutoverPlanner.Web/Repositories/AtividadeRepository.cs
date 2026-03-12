@@ -55,7 +55,7 @@ namespace CutoverPlanner.Web.Repositories
         {
             return await _db.Atividades
                         .Include(a => a.Executor).ThenInclude(e => e.Area)
-                        .Include(a => a.Sistema)
+                        .Include(a => a.Sistema).ThenInclude(e => e.Area)
                         .Include(a => a.Marco)
                         .FirstOrDefaultAsync(a => a.Id == id);
         }

@@ -4,30 +4,88 @@
     ViewData["Title"] = "Detalhes da Atividade";
 }
 
-<h1>Detalhes</h1>
-<div>
-    <dl class="row">
-        <dt class="col-sm-2">Id</dt>
-        <dd class="col-sm-10">@Model.Id</dd>
-        <dt class="col-sm-2">Título</dt>
-        <dd class="col-sm-10">@Model.Titulo</dd>
-        <dt class="col-sm-2">Sistema</dt>
-        <dd class="col-sm-10">@Model.Sistema?.Nome</dd>
-        <dt class="col-sm-2">Executor</dt>
-        <dd class="col-sm-10">@Model.Executor?.Nome</dd>
-        <dt class="col-sm-2">Marco</dt>
-        <dd class="col-sm-10">@Model.Marco?.Nome</dd>
-        <dt class="col-sm-2">Status</dt>
-        <dd class="col-sm-10">@Model.Status</dd>
-        <dt class="col-sm-2">Início</dt>
-        <dd class="col-sm-10">@Model.Inicio?.ToString("dd/MM/yyyy")</dd>
-        <dt class="col-sm-2">Término</dt>
-        <dd class="col-sm-10">@Model.Termino?.ToString("dd/MM/yyyy")</dd>
-        <dt class="col-sm-2">Observação</dt>
-        <dd class="col-sm-10">@Model.Observacao</dd>
-    </dl>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">@ViewData["Title"]</h3>
+    </div>
+    <div class="card-body">
+
+        <div class="btn-group">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+            <a asp-action="Index" class="btn btn-default">Voltar</a>
+        </div>
+
+        <hr />
+
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">Risco de GoLive</dt>
+                <dd class="col-sm-10">
+                    @if (Model.RiscoGoLive)
+                    {
+                        <span class="badge bg-danger">SIM</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary">NÃO</span>
+                    }
+                </dd>
+                <dt class="col-sm-2">Marco</dt>
+                <dd class="col-sm-10">@Model.Marco?.Nome</dd>
+                <dt class="col-sm-2">Sistema</dt>
+                <dd class="col-sm-10">@Model.Sistema?.Nome <br /><small class="text-muted ">@Model.Sistema?.Area?.Nome</small></dd>
+                <dt class="col-sm-2">Título</dt>
+                <dd class="col-sm-10"><strong>@Model.Titulo</strong></dd>
+                <dt class="col-sm-2">Executor</dt>
+                <dd class="col-sm-10">
+                    @Model.Executor?.Nome
+                    @if (!string.IsNullOrEmpty(Model.Executor?.Email))
+                    {
+                        <br /><small class="text-muted ">@Model.Executor?.Email</small>
+                    }
+                </dd>
+                <dt class="col-sm-2">Área do Executor</dt>
+                <dd class="col-sm-10">@Model.Executor?.Area?.Nome</dd>
+                <dt class="col-sm-2">Responsável da Área</dt>
+                <dd class="col-sm-10">
+                    @Model.Executor?.Area?.NomeResponsavel
+                    @if (!string.IsNullOrEmpty(Model.Executor?.Area?.EmailResponsavel))
+                    {
+                        <br /><small class="text-muted ">@Model.Executor?.Area?.EmailResponsavel</small>
+                    }
+                </dd>
+                <dt class="col-sm-2">Status</dt>
+                <dd class="col-sm-10">
+                    @if (Model.Status == StatusAtividade.Concluido)
+                    {
+                        <span class="badge bg-success">Concluído</span>
+                    }
+                    else if (Model.Status == StatusAtividade.EmAndamento)
+                    {
+                        <span class="badge bg-info">Em Andamento</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Pendente</span>
+                    }
+                </dd>
+                <dt class="col-sm-2">Início</dt>
+                <dd class="col-sm-10">@Model.Inicio?.ToString("dd/MM/yyyy HH:mm")</dd>
+                <dt class="col-sm-2">Término</dt>
+                <dd class="col-sm-10">@Model.Termino?.ToString("dd/MM/yyyy HH:mm")</dd>
+                @if (Model.Status != StatusAtividade.Concluido && Model.Termino.HasValue && Model.Termino.Value.Date < DateTime.Today)
+                {
+                    var dias = (DateTime.Today - Model.Termino.Value.Date).Days;
+                    <dt class="col-sm-2">Atraso</dt>
+                    <dd class="col-sm-10">@dias dia(s)</dd>
+                }
+                @if (!string.IsNullOrEmpty(Model.Observacao))
+                {
+                    <dt class="col-sm-2">Observação</dt>
+                    <dd class="col-sm-10">@Model.Observacao</dd>
+                }
+            </dl>
+        </div>
+
+    </div>
 </div>
-<p>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
-    <a asp-action="Index">Voltar à lista</a>
-</p>
