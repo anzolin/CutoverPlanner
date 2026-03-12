@@ -21,7 +21,8 @@ namespace CutoverPlanner.Domain.Models
         [Required]
         public int IdMarco { get; set; }
 
-        public Sistema? Marco { get; set; }
+        // should reference Marco entity, not Sistema
+        public Marco? Marco { get; set; }
 
         [Required]
         public string Titulo { get; set; } = string.Empty;
