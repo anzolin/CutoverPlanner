@@ -5,7 +5,7 @@ VisualStudioVersion = 18.4.11605.240
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutoverPlanner.Web", "src\CutoverPlanner.Web\CutoverPlanner.Web.csproj", "{E2D5E0B5-9C65-4E52-B3E0-8A6D6B4B9B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutoverPlanner.Domain", "CutoverPlanner.Domain\CutoverPlanner.Domain.csproj", "{4242C040-5AE0-498A-AF06-80B179EECBAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutoverPlanner.Domain", "src\CutoverPlanner.Domain\CutoverPlanner.Domain.csproj", "{4242C040-5AE0-498A-AF06-80B179EECBAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{DA432B03-439E-452D-A3AB-F119C21FDB00}"
 	ProjectSection(SolutionItems) = preProject
