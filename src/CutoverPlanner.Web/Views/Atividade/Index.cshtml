@@ -31,6 +31,9 @@
         <div class="btn-group">
             <a asp-action="Create" class="btn btn-primary">Nova Atividade</a>
             <a asp-action="Index" class="btn btn-default">Atualizar</a>
+            <a asp-action="Index" class="btn btn-default">Importar</a>
+            <a asp-action="Index" class="btn btn-default">Exportar</a>
+            <a asp-action="Index" class="btn btn-danger">Excluir tudo</a>
         </div>
 
         <hr />
@@ -63,6 +66,10 @@
                         <tr>
                             <td>@item.Sistema?.Nome</td>
                             <td>
+                                @if (item.RiscoGoLive)
+                                {
+                                    <small class="text-xs text-danger">Risco de GoLive</small><br />
+                                }
                                 <a asp-action="Details" asp-route-id="@item.Id">
                                     <strong>@item.Titulo</strong>
                                 </a>
@@ -71,9 +78,7 @@
                                 @item.Executor?.Nome
                                 @if (item.Executor?.Area?.Nome != null)
                                 {
-                                    <br />
-                                
-                                    <small class="text-xs text-muted">@item.Executor?.Area?.Nome</small>
+                                    <br /><small class="text-xs text-muted">@item.Executor?.Area?.Nome</small>
                                 }
                             </td>
                             <td>@item.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
@@ -96,7 +101,7 @@
                                 }
                                 else if (item.Status == StatusAtividade.EmAndamento)
                                 {
-                                    <span class="badge bg-info">Em Andamento</span>
+                                    <span class="badge bg-warning">Em Andamento</span>
                                 }
                                 else
                                 {
