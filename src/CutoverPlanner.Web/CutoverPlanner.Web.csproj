@@ -23,6 +23,6 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CutoverPlanner.Domain\CutoverPlanner.Domain.csproj" />
+    <ProjectReference Include="..\CutoverPlanner.Domain\CutoverPlanner.Domain.csproj" />
   </ItemGroup>
 </Project>
