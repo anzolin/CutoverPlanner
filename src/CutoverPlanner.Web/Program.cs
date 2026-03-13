@@ -10,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(opts =>
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<ExcelImportService>();
 builder.Services.AddScoped<IAreaService, AreaService>();
 builder.Services.AddScoped<IExecutorService, ExecutorService>();
 builder.Services.AddScoped<ISistemaService, SistemaService>();

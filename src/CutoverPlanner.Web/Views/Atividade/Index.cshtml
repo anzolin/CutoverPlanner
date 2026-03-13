@@ -20,6 +20,40 @@
                 <div class="col-md-2">
                     <input type="text" name="executor" placeholder="Executor..." value="@ViewData["executor"]" class="form-control" />
                 </div>
+                <div class="col-md-2">
+                    @{ var selectedStatus = ViewData["status"].ToString(); }
+                    <select class="form-select" name="status">
+                        <option value="">-- Status --</option>
+                        @if (selectedStatus == "NaoIniciado")
+                        {
+                            <option value="NaoIniciado" selected>Não Iniciado</option>
+                        }
+                        else
+                        {
+                            <option value="NaoIniciado">Não Iniciado</option>
+                        }
+                        @if (selectedStatus == "EmAndamento")
+                        {
+                            <option value="EmAndamento" selected>Em Andamento</option>
+                        }
+                        else
+                        {
+                            <option value="EmAndamento">Em Andamento</option>
+                        }
+                        @if (selectedStatus == "Concluido")
+                        {
+                            <option value="Concluido" selected>Concluído</option>
+                        }
+                        else
+                        {
+                            <option value="Concluido">Concluído</option>
+                        }
+                        </select>
+                </div>
+                <div class="col-md-2">
+                    <input class="form-check-input" type="checkbox" id="atrasadas" name="atrasadas" value="true" @(ViewBag.AtrasadasFilter == true ? "checked" : "") />
+                    <label class="form-check-label" for="atrasadas">Atrasadas</label>
+                </div>
                 <div class="col-md-1">
                     <button type="submit" class="btn btn-primary">Filtrar</button>
                 </div>
