@@ -31,9 +31,16 @@
         <div class="btn-group">
             <a asp-action="Create" class="btn btn-primary">Nova Atividade</a>
             <a asp-action="Index" class="btn btn-default">Atualizar</a>
-            <a asp-action="Index" class="btn btn-default">Importar</a>
-            <a asp-action="Index" class="btn btn-default">Exportar</a>
-            <a asp-action="Index" class="btn btn-danger">Excluir tudo</a>
+            <a asp-action="ImportarExcel" class="btn btn-default">Importar Excel</a>
+            @{
+                var queryString = ViewContext.HttpContext.Request.QueryString.ToString();
+                var exportUrl = "/Atividade/ExportarExcel" + queryString;
+            }
+            <a href="@exportUrl" class="btn btn-default">Exportar Excel</a>
+            <form method="post" action="/Atividade/ExcluirTodas" style="display:inline" onsubmit="return confirm('Tem certeza que deseja excluir todas as atividades?');">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-danger ms-2">Excluir Todas</button>
+            </form>
         </div>
 
         <hr />

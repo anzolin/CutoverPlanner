@@ -18,6 +18,11 @@ namespace CutoverPlanner.Web.Services
             return await _repo.GetByIdAsync(id);
         }
 
+        public async Task<Marco?> GetByNomeAsync(string nome)
+        {
+            return await _repo.GetByNomeAsync(nome);
+        }
+
         public async Task CreateAsync(Marco marco)
         {
             await _repo.AddAsync(marco);
