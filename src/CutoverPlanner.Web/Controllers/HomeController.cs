@@ -15,7 +15,12 @@ namespace CutoverPlanner.Web.Controllers
             var concl = _db.Atividades.Count(a => a.Status == StatusAtividade.Concluido);
             var emAnd = _db.Atividades.Count(a => a.Status == StatusAtividade.EmAndamento);
             var naoIni = total - concl - emAnd;
-            var riscos = _db.Atividades.Where(a => a.RiscoGoLive == true).OrderBy(a => a.Inicio).Take(10).ToList();
+            var riscos = _db.Atividades
+                .Where(a => a.RiscoGoLive == true && a.Status != StatusAtividade.Concluido)
+                .Include(i => i.Sistema)
+                .Include(i => i.Executor)
+                .OrderBy(a => a.Inicio)
+                .Take(10).ToList();
 
             // distribuição por área e por marco
             var distArea = _db.Atividades

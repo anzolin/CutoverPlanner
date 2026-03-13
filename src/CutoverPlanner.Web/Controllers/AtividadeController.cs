@@ -35,6 +35,7 @@ namespace CutoverPlanner.Web.Controllers
             bool? riscoGoLive)
         {
             var list = await _atividadeService.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas, riscoGoLive);
+
             return View(list);
         }
 
@@ -42,6 +43,7 @@ namespace CutoverPlanner.Web.Controllers
         {
             var atividade = await _atividadeService.GetByIdAsync(id);
             if (atividade == null) return NotFound();
+
             return View(atividade);
         }
 
@@ -49,10 +51,12 @@ namespace CutoverPlanner.Web.Controllers
         {
             await PopulateDropDowns();
 
-            var dataHoraAgora = DateTime.Now;
+            var dataHoraToday = DateTime.Today;
+            var inicio = dataHoraToday.AddDays(1).AddHours(8);
+            var termino = dataHoraToday.AddDays(8).AddHours(17).AddMinutes(30);
 
             // default status should use the existing enum values
-            return View(new Atividade() { Status = Domain.Enumerations.StatusAtividade.NaoIniciado, Inicio = dataHoraAgora.AddDays(1), Termino = dataHoraAgora.AddDays(8) });
+            return View(new Atividade() { Status = Domain.Enumerations.StatusAtividade.NaoIniciado, Inicio = inicio, Termino = termino });
         }
 
         [HttpPost]

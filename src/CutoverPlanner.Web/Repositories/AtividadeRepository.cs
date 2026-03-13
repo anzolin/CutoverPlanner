@@ -21,7 +21,7 @@ namespace CutoverPlanner.Web.Repositories
             var qq = _db.Atividades
                         .AsNoTracking()
                         .Include(a => a.Executor).ThenInclude(e => e.Area)
-                        .Include(a => a.Sistema)
+                        .Include(a => a.Sistema).ThenInclude(e => e.Area)
                         .Include(a => a.Marco)
                         .AsQueryable();
 

@@ -143,7 +143,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header bg-danger text-white">
-                    <h5 class="mb-0">⚠️ Atividades com Risco (Top 10)</h5>
+                    <h5 class="mb-0">⚠️ Atividades não concluídas com Risco de GoLive (Top 10)</h5>
                 </div>
                 <div class="card-body">
                     @if (ViewBag.Riscos != null && ViewBag.Riscos.Count > 0)
@@ -152,45 +152,42 @@
                             <table class="table table-sm table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Título</th>
                                         <th>Sistema</th>
+                                        <th>Título</th>
                                         <th>Executor</th>
                                         <th>Status</th>
                                         <th>Início</th>
                                         <th>Término</th>
-                                        <th>Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var atividade in ViewBag.Riscos)
                                     {
-                                        <tr class="table-danger">
-                                            <td>
-                                                <strong>@atividade.Titulo</strong>
-                                                @if (!string.IsNullOrEmpty(atividade.Observacao))
-                                                {
-                                                    <div class="small text-muted">@atividade.Observacao</div>
-                                                }
-                                            </td>
+                                        <tr>
                                             <td>@atividade.Sistema?.Nome</td>
+                                            <td>
+                                                <strong><a asp-controller="Atividade" asp-action="Details" asp-route-id="@atividade.Id">@atividade.Titulo</a></strong>
+                                            </td>
                                             <td>@atividade.Executor?.Nome</td>
                                             <td>
-                                                <span class="badge bg-secondary">@atividade.Status</span>
+                                                @if (atividade.Status == StatusAtividade.Concluido)
+                                                {
+                                                    <span class="badge bg-success">Concluído</span>
+                                                }
+                                                else if (atividade.Status == StatusAtividade.EmAndamento)
+                                                {
+                                                    <span class="badge bg-info">Em Andamento</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-danger">Pendente</span>
+                                                }
                                             </td>
                                             <td>@atividade.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
                                             <td>
-                                                @if (atividade.Termino.HasValue)
-                                                {
-                                                    <span class="@(atividade.Termino.Value < DateTime.Now && atividade.Status.ToString() != "Concluido" ? "text-danger" : "")">
-                                                        @atividade.Termino.Value.ToString("dd/MM/yyyy HH:mm")
-                                                    </span>
-                                                }
-                                            </td>
-                                            <td>
-                                                <a asp-controller="Atividade" asp-action="Edit" asp-route-id="@atividade.Id" 
-                                                   class="btn btn-sm btn-warning">Editar</a>
-                                                <a asp-controller="Atividade" asp-action="Details" asp-route-id="@atividade.Id" 
-                                                   class="btn btn-sm btn-info">Detalhes</a>
+                                                <span class="@(atividade.Termino < DateTime.Now && atividade.Status.ToString() != "Concluido" ? "text-danger" : "")">
+                                                    @atividade.Termino.ToString("dd/MM/yyyy HH:mm")
+                                                </span>
                                             </td>
                                         </tr>
                                     }
