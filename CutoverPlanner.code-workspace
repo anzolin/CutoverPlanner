@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "src/CutoverPlanner.Web"
+		},
+		{
+			"path": "src/CutoverPlanner.Domain"
+		}
+	],
+	"settings": {}
+}
