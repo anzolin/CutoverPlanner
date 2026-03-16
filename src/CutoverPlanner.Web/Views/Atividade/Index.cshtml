@@ -21,8 +21,10 @@
                     <input type="text" name="executor" placeholder="Executor..." value="@ViewData["executor"]" class="form-control" />
                 </div>
                 <div class="col-md-2">
-                    @{ var selectedStatus = ViewData["status"].ToString(); }
-                    <select class="form-select" name="status">
+                    @{
+                        var selectedStatus = ViewData["status"]; 
+                    }
+                        <select class="form-select" name="status">
                         <option value="">-- Status --</option>
                         @if (selectedStatus == "NaoIniciado")
                         {

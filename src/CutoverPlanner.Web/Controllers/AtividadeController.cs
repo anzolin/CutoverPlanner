@@ -51,13 +51,38 @@ namespace CutoverPlanner.Web.Controllers
             return View(atividade);
         }
 
+        /// <summary>
+        /// Retorna true se a data for um dia útil (segunda a sexta).
+        /// </summary>
+        public static bool EhDiaUtil(DateTime data)
+        {
+            return data.DayOfWeek != DayOfWeek.Saturday &&
+                data.DayOfWeek != DayOfWeek.Sunday;
+        }
+
+        /// <summary>
+        /// Se a data não for dia útil, incrementa até encontrar o próximo dia útil.
+        /// Se já for dia útil, retorna a própria data.
+        /// </summary>
+        public static DateTime ProximoDiaUtil(DateTime data)
+        {
+            var d = data.Date;
+            while (!EhDiaUtil(d))
+            {
+                d = d.AddDays(1);
+            }
+            return d;
+        }
+
         public async Task<IActionResult> Create()
         {
             await PopulateDropDowns();
 
             var dataHoraToday = DateTime.Today;
-            var inicio = dataHoraToday.AddDays(1).AddHours(8);
-            var termino = dataHoraToday.AddDays(8).AddHours(17).AddMinutes(30);
+            //var inicio = dataHoraToday.AddDays(1).AddHours(8);
+            var inicio = ProximoDiaUtil(dataHoraToday.AddDays(1)).AddHours(8);
+            //var termino = dataHoraToday.AddDays(8).AddHours(17).AddMinutes(30);
+            var termino = ProximoDiaUtil(dataHoraToday.AddDays(8)).AddHours(17).AddMinutes(30);
 
             // default status should use the existing enum values
             return View(new Atividade() { Status = Domain.Enumerations.StatusAtividade.NaoIniciado, Inicio = inicio, Termino = termino });
