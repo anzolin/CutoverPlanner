@@ -11,16 +11,15 @@ namespace CutoverPlanner.Web.Data
         public DbSet<Executor> Executores => Set<Executor>();
         public DbSet<Marco> Marcos => Set<Marco>();
         public DbSet<Sistema> Sistemas => Set<Sistema>();
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
-        protected AppDbContext()
+        
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             var areas = new List<Area>
             {
                 new Area()
                 {
                     Nome = "Genérica",
-                    NomeResponsavel = "",
+                    NomeResponsavel = "-",
                     EmailResponsavel = ""
                 },
                 new Area()
@@ -57,6 +56,30 @@ namespace CutoverPlanner.Web.Data
                 {
                     Nome = "GEAD/COBRANÇA",
                     NomeResponsavel = "Eder Marcos da Silva",
+                    EmailResponsavel = ""
+                },
+                new Area()
+                {
+                    Nome = "INFRA BANCO DE DADOS",
+                    NomeResponsavel = "Daniel Eduardo Garrido Barzellay",
+                    EmailResponsavel = ""
+                },
+                new Area()
+                {
+                    Nome = "INFRA APLICAÇÕES",
+                    NomeResponsavel = "Andrea Bittencourt",
+                    EmailResponsavel = ""
+                },
+                new Area()
+                {
+                    Nome = "PROJETO",
+                    NomeResponsavel = "Erica de Andrade e Santos",
+                    EmailResponsavel = ""
+                },
+                new Area()
+                {
+                    Nome = "USUÁRIO",
+                    NomeResponsavel = "Jean Carlo Ranucci do Amaral",
                     EmailResponsavel = ""
                 }
             };
