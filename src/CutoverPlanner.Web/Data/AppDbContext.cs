@@ -56,7 +56,7 @@ namespace CutoverPlanner.Web.Data
                 new Area()
                 {
                     Nome = "GEAD/COBRANÇA",
-                    NomeResponsavel = "Eder Marcos da Silva\r\n",
+                    NomeResponsavel = "Eder Marcos da Silva",
                     EmailResponsavel = ""
                 }
             };
