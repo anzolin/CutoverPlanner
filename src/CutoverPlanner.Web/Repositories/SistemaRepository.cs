@@ -44,6 +44,11 @@ namespace CutoverPlanner.Web.Repositories
             return await _db.Sistemas.FindAsync(id);
         }
 
+        public async Task<Sistema?> GetByNomeAsync(string nome)
+        {
+            return await _db.Sistemas.FirstOrDefaultAsync(q => q.Nome.ToLower().Equals(nome.ToLower()));
+        }
+
         public async Task UpdateAsync(Sistema sistema)
         {
             _db.Sistemas.Update(sistema);

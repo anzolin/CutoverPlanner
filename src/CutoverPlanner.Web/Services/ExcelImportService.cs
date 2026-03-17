@@ -7,19 +7,22 @@ namespace CutoverPlanner.Web.Services
 {
     public class ExcelImportService
     {
-        //private readonly ISistemaService _sistemaService;
-        //private readonly IMarcoService _marcoService;
-        //private readonly AppDbContext _db;
+        private readonly ISistemaService _sistemaService;
+        private readonly IAreaService _areaService;
+        private readonly IMarcoService _marcoService;
+        private readonly AppDbContext _db;
 
-        //public ExcelImportService(
-        //    ISistemaService sistemaService,
-        //    IMarcoService marcoService,
-        //    AppDbContext db)
-        //{
-        //    _sistemaService = sistemaService;
-        //    _marcoService = marcoService;
-        //    _db = db;
-        //}
+        public ExcelImportService(
+            ISistemaService sistemaService,
+            IAreaService areaService,
+            IMarcoService marcoService,
+            AppDbContext db)
+        {
+            _sistemaService = sistemaService;
+            _areaService = areaService;
+            _marcoService = marcoService;
+            _db = db;
+        }
 
         //public async Task<(int atividades, int deps, int areas, int endpoints)> ImportAsync(Stream xlsx)
         //{
@@ -150,103 +153,103 @@ namespace CutoverPlanner.Web.Services
         //    return (_db.Atividades.Count(), depCount, _db.AreasExecutoras.Count(), _db.Endpoints.Count());
         //}
 
-        //private static int GetCol(IXLWorksheet ws, string headerName)
-        //{
-        //    var rng = ws.RangeUsed().FirstRowUsed();
+        private static int GetCol(IXLWorksheet ws, string headerName)
+        {
+            var rng = ws.RangeUsed().FirstRowUsed();
 
-        //    foreach (var cell in rng.Cells())
-        //    {
-        //        if (string.Equals(cell.GetString().Trim(), headerName, StringComparison.OrdinalIgnoreCase))
-        //            return cell.Address.ColumnNumber;
-        //    }
+            foreach (var cell in rng.Cells())
+            {
+                if (string.Equals(cell.GetString().Trim(), headerName, StringComparison.OrdinalIgnoreCase))
+                    return cell.Address.ColumnNumber;
+            }
 
-        //    throw new InvalidOperationException($"Coluna '{headerName}' não encontrada na planilha.");
-        //}
+            throw new InvalidOperationException($"Coluna '{headerName}' não encontrada na planilha.");
+        }
 
-        //private static int? TryGetInt(IXLCell c)
-        //{
-        //    if (c.DataType == XLDataType.Number)
-        //        return (int)c.GetDouble();
+        private static int? TryGetInt(IXLCell c)
+        {
+            if (c.DataType == XLDataType.Number)
+                return (int)c.GetDouble();
 
-        //    if (int.TryParse(c.GetString(), out var v)) return v;
+            if (int.TryParse(c.GetString(), out var v)) return v;
 
-        //    return null;
-        //}
+            return null;
+        }
 
-        //private static bool NormalizeBool(string s)
-        //{
-        //    s = (s ?? string.Empty).Trim().ToUpperInvariant();
+        private static bool NormalizeBool(string s)
+        {
+            s = (s ?? string.Empty).Trim().ToUpperInvariant();
 
-        //    return s == "SIM" || s == "YES" || s == "Y" || s == "TRUE" || s == "1";
-        //}
+            return s == "SIM" || s == "YES" || s == "Y" || s == "TRUE" || s == "1";
+        }
 
-        //private async Task<Sistema?> ParseSistema(string nome)
-        //{
-        //    var sistema = await _sistemaService.GetByNomeAsync(nome);
+        private static bool? ParseNullableBool(string s)
+        {
+            if (string.IsNullOrWhiteSpace(s)) return null;
 
-        //    if (sistema == null)
-        //    {
-        //        sistema = new Sistema
-        //        {
-        //            Nome = nome,
-        //            IdArea = null
-        //        };
+            return NormalizeBool(s);
+        }
 
-        //        await _sistemaService.CreateAsync(sistema);
+        private static DateTime? GetDateTimeOrNull(IXLCell cell)
+        {
+            if (cell.DataType == XLDataType.DateTime && !cell.IsEmpty()) return cell.GetDateTime();
+            if (DateTime.TryParse(cell.GetString(), out var dt)) return dt;
 
-        //        // Gambiarra
-        //        sistema = await _sistemaService.GetByNomeAsync(nome);
-        //    }
+            return null;
+        }
 
-        //    return sistema;
-        //}
+        private static StatusAtividade ParseStatus(string s)
+        {
+            s = (s ?? string.Empty).Trim().ToUpperInvariant();
 
-        //private async Task<Marco?> ParseMarco(string nome)
-        //{
-        //    var marco = await _marcoService.GetByNomeAsync(nome);
+            return s switch
+            {
+                "EM ANDAMENTO" => StatusAtividade.EmAndamento,
+                "CONCLUÍDO" => StatusAtividade.Concluido,
+                "CONCLUIDO" => StatusAtividade.Concluido,
+                _ => StatusAtividade.NaoIniciado
+            };
+        }
 
-        //    if (marco == null)
-        //    {
-        //        marco = new Marco
-        //        {
-        //            Nome = nome
-        //        };
+        private async Task<Sistema?> ParseSistema(string nome)
+        {
+            var sistema = await _sistemaService.GetByNomeAsync(nome);
 
-        //        await _marcoService.CreateAsync(marco);
+            if (sistema == null)
+            {
+                sistema = new Sistema
+                {
+                    Nome = nome,
+                    IdArea = _areaService.GetByNomeAsync("Genérica").Id
+                };
 
-        //        // Gambiarra
-        //        marco = await _marcoService.GetByNomeAsync(nome);
-        //    }
+                await _sistemaService.CreateAsync(sistema);
 
-        //    return marco;
-        //}
+                // Gambiarra
+                sistema = await _sistemaService.GetByNomeAsync(nome);
+            }
 
-        //private static bool? ParseNullableBool(string s)
-        //{
-        //    if (string.IsNullOrWhiteSpace(s)) return null;
+            return sistema;
+        }
 
-        //    return NormalizeBool(s);
-        //}
+        private async Task<Marco?> ParseMarco(string nome)
+        {
+            var marco = await _marcoService.GetByNomeAsync(nome);
 
-        //private static DateTime? GetDateTimeOrNull(IXLCell cell)
-        //{
-        //    if (cell.DataType == XLDataType.DateTime && !cell.IsEmpty()) return cell.GetDateTime();
-        //    if (DateTime.TryParse(cell.GetString(), out var dt)) return dt;
+            if (marco == null)
+            {
+                marco = new Marco
+                {
+                    Nome = nome
+                };
 
-        //    return null;
-        //}
+                await _marcoService.CreateAsync(marco);
 
-        //private static StatusAtividade ParseStatus(string s)
-        //{
-        //    s = (s ?? string.Empty).Trim().ToUpperInvariant();
+                // Gambiarra
+                marco = await _marcoService.GetByNomeAsync(nome);
+            }
 
-        //    return s switch
-        //    {
-        //        "EM ANDAMENTO" => StatusAtividade.EmAndamento,
-        //        "CONCLUÍDO" => StatusAtividade.Concluido,
-        //        "CONCLUIDO" => StatusAtividade.Concluido,
-        //        _ => StatusAtividade.NaoIniciado
-        //    };
-        //}
+            return marco;
+        }
     }
 }

@@ -22,6 +22,11 @@ namespace CutoverPlanner.Web.Services
             return await _areaRepository.GetByIdAsync(id);
         }
 
+        public async Task<Area?> GetByNomeAsync(string nome)
+        {
+            return await _areaRepository.GetByNomeAsync(nome);
+        }
+
         public async Task CreateAsync(Area area)
         {
             await _areaRepository.AddAsync(area);

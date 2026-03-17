@@ -35,6 +35,11 @@ namespace CutoverPlanner.Web.Repositories
             return await _db.Areas.FindAsync(id);
         }
 
+        public async Task<Area?> GetByNomeAsync(string nome)
+        {
+            return await _db.Areas.FirstOrDefaultAsync(q => q.Nome.ToLower().Equals(nome.ToLower()));
+        }
+
         public async Task UpdateAsync(Area area)
         {
             _db.Areas.Update(area);

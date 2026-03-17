@@ -6,6 +6,7 @@ namespace CutoverPlanner.Web.Repositories
     {
         Task<IEnumerable<Sistema>> GetAllAsync();
         Task<Sistema?> GetByIdAsync(int id);
+        Task<Sistema?> GetByNomeAsync(string nome);
         Task AddAsync(Sistema sistema);
         Task UpdateAsync(Sistema sistema);
         Task DeleteAsync(int id);

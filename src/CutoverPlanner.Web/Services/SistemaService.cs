@@ -22,6 +22,11 @@ namespace CutoverPlanner.Web.Services
             return await _sistemaRepository.GetByIdAsync(id);
         }
 
+        public async Task<Sistema?> GetByNomeAsync(string nome)
+        {
+            return await _sistemaRepository.GetByNomeAsync(nome);
+        }
+
         public async Task CreateAsync(Sistema sistema)
         {
             await _sistemaRepository.AddAsync(sistema);
