@@ -252,7 +252,37 @@ namespace CutoverPlanner.Web.Data
                 },
                 new Executor()
                 {
+                    Nome = "Livia Mariquito Montes",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                },
+                new Executor()
+                {
+                    Nome = "Joaquim Camerino Moraes de Souza",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                },
+                new Executor()
+                {
                     Nome = "Jean Carlo Ranucci do Amaral",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                },
+                new Executor()
+                {
+                    Nome = "Sharles Mendes Rodrigues",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                },
+                new Executor()
+                {
+                    Nome = "Mauro Souza Carvalho Junior",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                },
+                new Executor()
+                {
+                    Nome = "Rinaldo Antonio Dias Pereira",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
                 },
