@@ -29,6 +29,7 @@ namespace CutoverPlanner.Web.Repositories
         {
             return await _db.Sistemas.AsNoTracking()
                 .Include(s => s.Area)
+                .OrderBy(ob => ob.Nome)
                 .ToListAsync();
         }
 

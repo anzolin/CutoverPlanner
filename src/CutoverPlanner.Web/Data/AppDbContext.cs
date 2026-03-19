@@ -14,7 +14,7 @@ namespace CutoverPlanner.Web.Data
         
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            #region Executores
+            #region Áreas
 
             var areas = new List<Area>
             {
@@ -164,13 +164,13 @@ namespace CutoverPlanner.Web.Data
                 {
                     Nome = "Lucas de Almeida Teixeira",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS CONVENCIONAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS DIGITAIS").Id
                 },
                 new Executor()
                 {
                     Nome = "Marco Aurelio Vilela Sousa",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS CONVENCIONAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS DIGITAIS").Id
                 },
                 new Executor()
                 {

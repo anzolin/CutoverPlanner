@@ -27,7 +27,7 @@ namespace CutoverPlanner.Web.Repositories
 
         public async Task<IEnumerable<Area>> GetAllAsync()
         {
-            return await _db.Areas.AsNoTracking().ToListAsync();
+            return await _db.Areas.AsNoTracking().OrderBy(ob => ob.Nome).ToListAsync();
         }
 
         public async Task<Area?> GetByIdAsync(int id)

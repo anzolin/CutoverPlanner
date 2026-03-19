@@ -262,8 +262,8 @@ namespace CutoverPlanner.Web.Controllers
 
         private async Task PopulateDropDowns(Atividade? atividade = null)
         {
-            ViewBag.Sistemas = new SelectList(await _sistemaService.GetAllAsync(), "Id", "Nome", atividade?.IdSistema);
-            ViewBag.Executores = new SelectList(await _executorService.GetAllAsync(), "Id", "Nome", atividade?.IdExecutor);
+            ViewBag.Sistemas = new SelectList(await _sistemaService.GetAllAsync(), "Id", "Nome", atividade?.IdSistema, "Area.Nome");
+            ViewBag.Executores = new SelectList(await _executorService.GetAllAsync(), "Id", "Nome", atividade?.IdExecutor, "Area.Nome");
             ViewBag.Marcos = new SelectList(await _marcoService.GetAllAsync(), "Id", "Nome", atividade?.IdMarco);
         }
     }
