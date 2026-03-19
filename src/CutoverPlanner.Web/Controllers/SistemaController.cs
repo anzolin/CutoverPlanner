@@ -93,7 +93,26 @@ namespace CutoverPlanner.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _sistemaService.DeleteAsync(id);
+            var sistema = await _sistemaService.GetByIdAsync(id);
+
+            try
+            {
+                if (sistema.Atividades.Any())
+                {
+                    ModelState.AddModelError("", $"Possui atividades");
+
+                    return View(sistema);
+                } 
+                else
+                    await _sistemaService.DeleteAsync(id);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Erro ao excluir: {ex.Message}");
+
+                return View(sistema);
+            }
+
             return RedirectToAction(nameof(Index));
         }
     }
