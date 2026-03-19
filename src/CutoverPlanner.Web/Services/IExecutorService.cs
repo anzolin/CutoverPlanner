@@ -6,6 +6,8 @@ namespace CutoverPlanner.Web.Services
     {
         Task<IEnumerable<Executor>> GetAllAsync();
         Task<Executor?> GetByIdAsync(int id);
+        Task<Executor?> GetByNomeAsync(string nome);
+        Task<Executor?> GetByNomeAreaAsync(string nome, string area);
         Task CreateAsync(Executor executor);
         Task UpdateAsync(Executor executor);
         Task DeleteAsync(int id);

@@ -46,6 +46,16 @@ namespace CutoverPlanner.Web.Repositories
             return await _db.Executores.FindAsync(id);
         }
 
+        public async Task<Executor?> GetByNomeAsync(string nome)
+        {
+            return await _db.Executores.FirstOrDefaultAsync(q => q.Nome.ToLower().Equals(nome.ToLower()));
+        }
+
+        public async Task<Executor?> GetByNomeAreaAsync(string nome, string area)
+        {
+            return await _db.Executores.FirstOrDefaultAsync(q => q.Nome.ToLower().Equals(nome.ToLower()) && q.Area.Nome.ToLower().Equals(area.ToLower()));
+        }
+
         public async Task UpdateAsync(Executor executor)
         {
             _db.Executores.Update(executor);

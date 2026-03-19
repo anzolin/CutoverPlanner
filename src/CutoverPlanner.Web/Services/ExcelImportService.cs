@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using CutoverPlanner.Domain.Constants;
 using CutoverPlanner.Domain.Enumerations;
 using CutoverPlanner.Domain.Models;
 using CutoverPlanner.Web.Data;
@@ -9,17 +10,20 @@ namespace CutoverPlanner.Web.Services
     {
         private readonly ISistemaService _sistemaService;
         private readonly IAreaService _areaService;
+        private readonly IExecutorService _executorService;
         private readonly IMarcoService _marcoService;
         private readonly AppDbContext _db;
 
         public ExcelImportService(
             ISistemaService sistemaService,
             IAreaService areaService,
+            IExecutorService executorService,
             IMarcoService marcoService,
             AppDbContext db)
         {
             _sistemaService = sistemaService;
             _areaService = areaService;
+            _executorService = executorService;
             _marcoService = marcoService;
             _db = db;
         }
@@ -211,6 +215,27 @@ namespace CutoverPlanner.Web.Services
             };
         }
 
+        private async Task<Executor?> ParseExecutor(string nome, string? area)
+        {
+            var executor = await _executorService.GetByNomeAsync(nome);
+
+            if (executor == null)
+            {
+                executor = new Executor()
+                {
+                    Nome = nome,
+                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.Generica).Id
+                };
+
+                await _executorService.CreateAsync(executor);
+
+                // Gambiarra
+                executor = await _executorService.GetByNomeAsync(nome);
+            }
+
+            return executor;
+        }
+
         private async Task<Sistema?> ParseSistema(string nome)
         {
             var sistema = await _sistemaService.GetByNomeAsync(nome);
@@ -220,7 +245,7 @@ namespace CutoverPlanner.Web.Services
                 sistema = new Sistema
                 {
                     Nome = nome,
-                    IdArea = _areaService.GetByNomeAsync("Genérica").Id
+                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.Generica).Id
                 };
 
                 await _sistemaService.CreateAsync(sistema);

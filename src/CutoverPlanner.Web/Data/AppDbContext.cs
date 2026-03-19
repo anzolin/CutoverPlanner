@@ -1,3 +1,4 @@
+using CutoverPlanner.Domain.Constants;
 using CutoverPlanner.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -20,73 +21,73 @@ namespace CutoverPlanner.Web.Data
             {
                 new Area()
                 {
-                    Nome = "Genérica",
+                    Nome = GenericoConstants.Generica,
                     NomeResponsavel = "-",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/OPERAÇÃO DESPACHO",
+                    Nome = GenericoConstants.AreaGeadOperacaoDespacho,
                     NomeResponsavel = "Ana Cristina Barbosa Faria",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/CANAIS CONVENCIONAIS",
+                    Nome = GenericoConstants.AreaGeadCanaisConvencionais,
                     NomeResponsavel = "Valeria Martelloti da Silva",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/CANAIS DIGITAIS",
+                    Nome = GenericoConstants.AreaGeadCanaisDigitais,
                     NomeResponsavel = "Marco Aurelio Vilela Sousa",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/COBRANÇA",
+                    Nome = GenericoConstants.AreaGeadCobranca,
                     NomeResponsavel = "Thiago Rodrigues e Rodrigues",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/OPERAÇÃO MANUTENÇÃO",
+                    Nome = GenericoConstants.AreaGeadOperacaoManutencao,
                     NomeResponsavel = "Otavio de Barros Freitas",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "GEAD/FATURAMENTO",
+                    Nome = GenericoConstants.AreaGeadFaturamento,
                     NomeResponsavel = "Eder Marcos da Silva",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "INFRA BANCO DE DADOS",
+                    Nome = GenericoConstants.AreaInfraBancoDados,
                     NomeResponsavel = "Daniel Eduardo Garrido Barzellay",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "INFRA APLICAÇÕES",
+                    Nome = GenericoConstants.AreaInfraAplicacoes,
                     NomeResponsavel = "Andrea Cristina Bittencourt Moraes",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "INFRA DATACENTER E CLOUD",
+                    Nome = GenericoConstants.AreaInfraDatacenterECloud,
                     NomeResponsavel = "Valeria Ferreira Victor",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "PROJETO",
+                    Nome = GenericoConstants.AreaProjeto,
                     NomeResponsavel = "Erica de Andrade e Santos",
                     EmailResponsavel = ""
                 },
                 new Area()
                 {
-                    Nome = "USUÁRIO",
+                    Nome = GenericoConstants.AreaUsuario,
                     NomeResponsavel = "Jean Carlo Ranucci do Amaral",
                     EmailResponsavel = ""
                 }
@@ -108,202 +109,214 @@ namespace CutoverPlanner.Web.Data
             {
                 new Executor()
                 {
-                    Nome = "Genérico",
+                    Nome = GenericoConstants.Generico,
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "Genérica").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.Generica).Id
                 },
                 new Executor()
                 {
                     Nome = "Wagner Bianchini Narde",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Daniel Felipe Borba",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Douglas Torres Cravo Borges",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Diego Anzolin Ferreira",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Bruno Barroso Miranda",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Ana Cristina Barbosa Faria",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO DESPACHO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Executor()
                 {
                     Nome = "Victor Teixeira Pinheiro",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS CONVENCIONAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisConvencionais).Id
                 },
                 new Executor()
                 {
                     Nome = "Valeria Martelloti da Silva",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS CONVENCIONAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisConvencionais).Id
                 },
                 new Executor()
                 {
                     Nome = "Lucas de Almeida Teixeira",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS DIGITAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
                 },
                 new Executor()
                 {
                     Nome = "Marco Aurelio Vilela Sousa",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/CANAIS DIGITAIS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
                 },
                 new Executor()
                 {
                     Nome = "Diogo de Souza Miranda",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/COBRANÇA").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCobranca).Id
                 },
                 new Executor()
                 {
                     Nome = "Thiago Rodrigues e Rodrigues",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/COBRANÇA").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCobranca).Id
+                },
+                new Executor()
+                {
+                    Nome = "Anderson Luiz Pereira Dias",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadFaturamento).Id
+                },
+                new Executor()
+                {
+                    Nome = "Eder Marcos da Silva",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadFaturamento).Id
                 },
                 new Executor()
                 {
                     Nome = "Marcus Vinicius Alves de Castro",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO MANUTENÇÃO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoManutencao).Id
                 },
                 new Executor()
                 {
                     Nome = "Otavio de Barros Freitas",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "GEAD/OPERAÇÃO MANUTENÇÃO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoManutencao).Id
                 },
                 new Executor()
                 {
                     Nome = "Andrea Cristina Bittencourt Moraes",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA APLICAÇÕES").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
                 new Executor()
                 {
                     Nome = "Joao Luiz de Souza Torres",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA APLICAÇÕES").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
                 new Executor()
                 {
                     Nome = "Ghullite Tacone Bento",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA APLICAÇÕES").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
                 new Executor()
                 {
                     Nome = "Valeria Ferreira Victor",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA DATACENTER E CLOUD").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
                     Nome = "Carlos Roberto Pereira de Aquino",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA DATACENTER E CLOUD").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
                     Nome = "Carlos Andre Souza",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA DATACENTER E CLOUD").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
                     Nome = "Rebeca Vitoria Costa Souza",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA DATACENTER E CLOUD").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
                     Nome = "Erica de Andrade e Santos",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
                 },
                 new Executor()
                 {
                     Nome = "Bruno Miranda Couto",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
                 },
                 new Executor()
                 {
                     Nome = "Livia Mariquito Montes",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
                 },
                 new Executor()
                 {
                     Nome = "Joaquim Camerino Moraes de Souza",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "PROJETO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
                 },
                 new Executor()
                 {
                     Nome = "Jean Carlo Ranucci do Amaral",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaUsuario).Id
                 },
                 new Executor()
                 {
                     Nome = "Sharles Mendes Rodrigues",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaUsuario).Id
                 },
                 new Executor()
                 {
                     Nome = "Mauro Souza Carvalho Junior",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaUsuario).Id
                 },
                 new Executor()
                 {
                     Nome = "Rinaldo Antonio Dias Pereira",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "USUÁRIO").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaUsuario).Id
                 },
                 new Executor()
                 {
                     Nome = "Daniel Eduardo Garrido Barzellay",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA BANCO DE DADOS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraBancoDados).Id
                 },
                 new Executor()
                 {
                     Nome = "Andre Domingues dos Santos Lomba",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA BANCO DE DADOS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraBancoDados).Id
                 }
                 ,
                 new Executor()
                 {
                     Nome = "Eduardo Celso de Paula",
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == "INFRA BANCO DE DADOS").Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraBancoDados).Id
                 }
             };
 

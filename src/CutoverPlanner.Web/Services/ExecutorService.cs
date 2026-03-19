@@ -17,6 +17,16 @@ namespace CutoverPlanner.Web.Services
             return await _executorRepository.GetAllAsync();
         }
 
+        public async Task<Executor?> GetByNomeAsync(string nome)
+        {
+            return await _executorRepository.GetByNomeAsync(nome);
+        }
+
+        public async Task<Executor?> GetByNomeAreaAsync(string nome, string area)
+        {
+            return await _executorRepository.GetByNomeAreaAsync(nome, area);
+        }
+
         public async Task<Executor?> GetByIdAsync(int id)
         {
             return await _executorRepository.GetByIdAsync(id);
