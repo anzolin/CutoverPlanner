@@ -16,5 +16,8 @@
         public const string AreaInfraBancoDados = "INFRA BANCO DE DADOS";
         public const string AreaProjeto = "PROJETO";
         public const string AreaUsuario = "USUÁRIO";
+        public const string AreaNA = "N/A";
+
+        public const string SistemaNA = "N/A";
     }
 }

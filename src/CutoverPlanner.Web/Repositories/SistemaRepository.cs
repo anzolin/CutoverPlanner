@@ -28,8 +28,9 @@ namespace CutoverPlanner.Web.Repositories
         public async Task<IEnumerable<Sistema>> GetAllAsync()
         {
             return await _db.Sistemas.AsNoTracking()
-                .Include(s => s.Area)
-                .OrderBy(ob => ob.Nome)
+                .Include(e => e.Area)
+                .OrderBy(ob => ob.Area.Nome)
+                .ThenBy(ob => ob.Nome)
                 .ToListAsync();
         }
 
