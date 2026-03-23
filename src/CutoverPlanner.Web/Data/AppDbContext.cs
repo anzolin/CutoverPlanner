@@ -273,19 +273,31 @@ namespace CutoverPlanner.Web.Data
                 },
                 new Executor()
                 {
+                    Nome = "Eder Xavier Alves (ELK)",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
+                },
+                new Executor()
+                {
+                    Nome = "Fernando Francisco de Oliveira (DataDog)",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
+                },
+                new Executor()
+                {
                     Nome = "Andrea Cristina Bittencourt Moraes",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
                 new Executor()
                 {
-                    Nome = "Joao Luiz de Souza Torres",
+                    Nome = "Joao Luiz de Souza Torres (Kafka)",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
                 new Executor()
                 {
-                    Nome = "Ghullite Tacone Bento",
+                    Nome = "Ghullite Tacone Bento (Sensedia)",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraAplicacoes).Id
                 },
@@ -297,19 +309,19 @@ namespace CutoverPlanner.Web.Data
                 },
                 new Executor()
                 {
-                    Nome = "Carlos Roberto Pereira de Aquino",
+                    Nome = "Carlos Roberto Pereira de Aquino (OpenShift)",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
-                    Nome = "Carlos Andre Souza",
+                    Nome = "Carlos Andre Souza (OpenShift)",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
                 new Executor()
                 {
-                    Nome = "Rebeca Vitoria Costa Souza",
+                    Nome = "Rebeca Vitoria Costa Souza (OpenShift)",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaInfraDatacenterECloud).Id
                 },
@@ -334,6 +346,18 @@ namespace CutoverPlanner.Web.Data
                 new Executor()
                 {
                     Nome = "Joaquim Camerino Moraes de Souza",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
+                },
+                new Executor()
+                {
+                    Nome = "Rodrigo Freitas Vallandro",
+                    Email = "",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
+                },
+                new Executor()
+                {
+                    Nome = "Jobson Ferreira de Andrade Filho",
                     Email = "",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaProjeto).Id
                 },
