@@ -15,62 +15,6 @@ namespace CutoverPlanner.Web.Data
         
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            #region Sistemas
-
-            var sistemas = new List<Sistema>
-            {
-                new Sistema()
-                {
-                    Nome = GenericoConstants.SistemaNA,
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaNA).Id
-                },
-                new Sistema()
-                {
-                    Nome = GenericoConstants.Generico,
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.Generica).Id
-                },
-                new Sistema()
-                {
-                    Nome = "SICCO",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadFaturamento).Id
-                },
-                new Sistema()
-                {
-                    Nome = "SICNT",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
-                },
-                new Sistema()
-                {
-                    Nome = "SIATT",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisConvencionais).Id
-                },
-                new Sistema()
-                {
-                    Nome = "EON",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
-                },
-                new Sistema()
-                {
-                    Nome = "GISA",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
-                },
-                new Sistema()
-                {
-                    Nome = "NRSS",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
-                },
-            };
-
-            foreach (var sistema in sistemas)
-            {
-                if (!this.Sistemas.Any(q => q.Nome.Equals(sistema.Nome)))
-                    this.Add(sistema);
-
-                this.SaveChanges();
-            }
-
-            #endregion
-
             #region Áreas
 
             var areas = new List<Area>
@@ -159,6 +103,62 @@ namespace CutoverPlanner.Web.Data
             {
                 if (!this.Areas.Any(q => q.Nome.Equals(area.Nome)))
                     this.Add(area);
+
+                this.SaveChanges();
+            }
+
+            #endregion
+
+            #region Sistemas
+
+            var sistemas = new List<Sistema>
+            {
+                new Sistema()
+                {
+                    Nome = GenericoConstants.SistemaNA,
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaNA).Id
+                },
+                new Sistema()
+                {
+                    Nome = GenericoConstants.Generico,
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.Generica).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SICCO",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadFaturamento).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SICNT",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SIATT",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisConvencionais).Id
+                },
+                new Sistema()
+                {
+                    Nome = "EON",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
+                },
+                new Sistema()
+                {
+                    Nome = "GISA",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
+                },
+                new Sistema()
+                {
+                    Nome = "NRSS",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
+                },
+            };
+
+            foreach (var sistema in sistemas)
+            {
+                if (!this.Sistemas.Any(q => q.Nome.Equals(sistema.Nome)))
+                    this.Add(sistema);
 
                 this.SaveChanges();
             }
