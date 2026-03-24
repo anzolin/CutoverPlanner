@@ -140,6 +140,11 @@ namespace CutoverPlanner.Web.Data
                 },
                 new Sistema()
                 {
+                    Nome = "SIATE",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisConvencionais).Id
+                },
+                new Sistema()
+                {
                     Nome = "EON",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadCanaisDigitais).Id
                 },

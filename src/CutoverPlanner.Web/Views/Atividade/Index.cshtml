@@ -130,7 +130,7 @@
                                 @if (item.Status != StatusAtividade.Concluido && item.Termino.HasValue && item.Termino.Value.Date < DateTime.Today)
                                 {
                                     var dias = (DateTime.Today - item.Termino.Value.Date).Days;
-                                    <span class="badge bg-danger">@dias</span>
+                                    <small class="text-danger">@dias dias</small>
                                 }
                                 else
                                 {
