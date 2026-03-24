@@ -61,8 +61,7 @@ namespace CutoverPlanner.Web.Controllers
         /// </summary>
         public static bool EhDiaUtil(DateTime data)
         {
-            return data.DayOfWeek != DayOfWeek.Saturday &&
-                data.DayOfWeek != DayOfWeek.Sunday;
+            return data.DayOfWeek != DayOfWeek.Saturday && data.DayOfWeek != DayOfWeek.Sunday;
         }
 
         /// <summary>
@@ -72,10 +71,12 @@ namespace CutoverPlanner.Web.Controllers
         public static DateTime ProximoDiaUtil(DateTime data)
         {
             var d = data.Date;
+
             while (!EhDiaUtil(d))
             {
                 d = d.AddDays(1);
             }
+
             return d;
         }
 

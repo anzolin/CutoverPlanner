@@ -27,9 +27,37 @@ namespace CutoverPlanner.Web.Controllers
             return View(plano);
         }
 
+        /// <summary>
+        /// Retorna true se a data for um dia útil (segunda a sexta).
+        /// </summary>
+        public static bool EhDiaUtil(DateTime data)
+        {
+            return data.DayOfWeek != DayOfWeek.Saturday && data.DayOfWeek != DayOfWeek.Sunday;
+        }
+
+        /// <summary>
+        /// Se a data não for dia útil, incrementa até encontrar o próximo dia útil.
+        /// Se já for dia útil, retorna a própria data.
+        /// </summary>
+        public static DateTime ProximoDiaUtil(DateTime data)
+        {
+            var d = data.Date;
+
+            while (!EhDiaUtil(d))
+            {
+                d = d.AddDays(1);
+            }
+
+            return d;
+        }
+
         public IActionResult Create()
         {
-            return View();
+            var dataHoraToday = DateTime.Today;
+            var inicio = ProximoDiaUtil(dataHoraToday).AddHours(8);
+            var termino = ProximoDiaUtil(dataHoraToday.AddDays(30)).AddHours(17).AddMinutes(30);
+
+            return View(new Plano() { Inicio = inicio, Termino = termino });
         }
 
         [HttpPost]
