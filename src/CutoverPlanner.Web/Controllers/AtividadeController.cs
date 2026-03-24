@@ -12,6 +12,7 @@ namespace CutoverPlanner.Web.Controllers
         private readonly IExecutorService _executorService;
         private readonly ISistemaService _sistemaService;
         private readonly IMarcoService _marcoService;
+        private readonly IPlanoService _planoService;
         private readonly ExcelImportService _import;
 
         public AtividadeController(
@@ -19,12 +20,14 @@ namespace CutoverPlanner.Web.Controllers
             IExecutorService executorService,
             ISistemaService sistemaService,
             IMarcoService marcoService,
+            IPlanoService planoService,
             ExcelImportService import)
         {
             _atividadeService = atividadeService;
             _executorService = executorService;
             _sistemaService = sistemaService;
             _marcoService = marcoService;
+            _planoService = planoService;
             _import = import;
         }
 
@@ -39,6 +42,8 @@ namespace CutoverPlanner.Web.Controllers
             bool? riscoGoLive)
         {
             var list = await _atividadeService.GetFilteredAsync(status, sistema, area, responsavelArea, executor, busca, atrasadas, riscoGoLive);
+
+            ViewBag.Planos = new SelectList(await _planoService.GetAllAsync(), "Id", "Nome");
 
             return View(list);
         }
@@ -265,6 +270,7 @@ namespace CutoverPlanner.Web.Controllers
             ViewBag.Sistemas = new SelectList(await _sistemaService.GetAllAsync(), "Id", "Nome", atividade?.IdSistema, "Area.Nome");
             ViewBag.Executores = new SelectList(await _executorService.GetAllAsync(), "Id", "Nome", atividade?.IdExecutor, "Area.Nome");
             ViewBag.Marcos = new SelectList(await _marcoService.GetAllAsync(), "Id", "Nome", atividade?.IdMarco);
+            ViewBag.Planos = new SelectList(await _planoService.GetAllAsync(), "Id", "Nome", atividade?.IdPlano);
         }
     }
 }

@@ -15,6 +15,7 @@ builder.Services.AddScoped<IAreaService, AreaService>();
 builder.Services.AddScoped<IExecutorService, ExecutorService>();
 builder.Services.AddScoped<ISistemaService, SistemaService>();
 builder.Services.AddScoped<IAtividadeService, AtividadeService>();
+builder.Services.AddScoped<IPlanoService, PlanoService>();
 builder.Services.AddScoped<IMarcoService, MarcoService>();
 
 // repository and exporter abstractions used by controllers
@@ -22,6 +23,7 @@ builder.Services.AddScoped<IAreaRepository, AreaRepository>();
 builder.Services.AddScoped<IAtividadeRepository, AtividadeRepository>();
 builder.Services.AddScoped<IExecutorRepository, ExecutorRepository>();
 builder.Services.AddScoped<IMarcoRepository, MarcoRepository>();
+builder.Services.AddScoped<IPlanoRepository, PlanoRepository>();
 builder.Services.AddScoped<ISistemaRepository, SistemaRepository>();
 
 var app = builder.Build();

@@ -23,6 +23,7 @@ namespace CutoverPlanner.Web.Repositories
                         .Include(a => a.Executor).ThenInclude(e => e.Area)
                         .Include(a => a.Sistema).ThenInclude(e => e.Area)
                         .Include(a => a.Marco)
+                        .Include(a => a.Plano)
                         .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(status) && Enum.TryParse<StatusAtividade>(status, out var st))
@@ -57,6 +58,7 @@ namespace CutoverPlanner.Web.Repositories
                         .Include(a => a.Executor).ThenInclude(e => e.Area)
                         .Include(a => a.Sistema).ThenInclude(e => e.Area)
                         .Include(a => a.Marco)
+                        .Include(a => a.Plano)
                         .FirstOrDefaultAsync(a => a.Id == id);
         }
 
@@ -100,6 +102,7 @@ namespace CutoverPlanner.Web.Repositories
                         .Include(a => a.Executor).ThenInclude(e => e.Area)
                         .Include(a => a.Sistema)
                         .Include(a => a.Marco)
+                        .Include(a => a.Plano)
                         .ToListAsync();
         }
     }

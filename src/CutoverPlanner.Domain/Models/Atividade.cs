@@ -9,6 +9,11 @@ namespace CutoverPlanner.Domain.Models
         public int Id { get; set; }
 
         [Required]
+        public int IdPlano { get; set; }
+
+        public Plano? Plano { get; set; }
+
+        [Required]
         public int IdSistema { get; set; }
 
         public Sistema? Sistema { get; set; }
@@ -42,7 +47,5 @@ namespace CutoverPlanner.Domain.Models
         public string? Observacao { get; set; }
 
         public string? LinkRepositorio { get; set; }
-
-        public string? PredecessorasRaw { get; set; }
     }
 }

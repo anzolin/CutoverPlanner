@@ -5,8 +5,10 @@
 }
 
 <div class="card">
-    <div class="card-header">
+    <div class="card-header d-flex">
         <h3 class="card-title">Pesquisa de @ViewData["Title"]</h3>
+        <select class="form-select w-auto ms-auto" aria-label="Selecione o Plano" asp-items="ViewBag.Planos">
+        </select>
     </div>
     <div class="card-body">
         <form asp-action="Index" method="get" class="mb-3">
@@ -96,7 +98,7 @@
             </thead>
             <tbody>
                 @{
-                    var grouped = Model.GroupBy(a => a.Marco?.Nome ?? "Sem Marco")
+                    var grouped = Model.GroupBy(a => a.Marco?.Nome ?? CutoverPlanner.Domain.Constants.GenericoConstants.MarcoNA)
                                        .OrderBy(g => g.Key);
                 }
                 @foreach (var group in grouped)

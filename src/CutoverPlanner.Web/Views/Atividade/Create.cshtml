@@ -8,6 +8,10 @@
 
 <form asp-action="Create" method="post">
     <div class="form-group">
+        <label asp-for="IdPlano">Plano</label>
+        <select asp-for="IdPlano" class="form-control" asp-items="ViewBag.Planos"></select>
+    </div>
+    <div class="form-group">
         <label asp-for="IdMarco">Marco</label>
         <select asp-for="IdMarco" class="form-control" asp-items="ViewBag.Marcos"></select>
     </div>

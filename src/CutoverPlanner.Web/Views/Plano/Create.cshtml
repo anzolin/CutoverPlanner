@@ -1,0 +1,31 @@
+@model CutoverPlanner.Domain.Models.Plano
+
+@{
+    ViewData["Title"] = "Novo Plano";
+}
+
+<h1>Criar Plano</h1>
+
+<div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Inicio"></label>
+        <input asp-for="Inicio" type="datetime-local" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Termino"></label>
+        <input asp-for="Termino" type="datetime-local" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

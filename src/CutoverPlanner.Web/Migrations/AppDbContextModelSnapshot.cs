@@ -50,6 +50,9 @@ namespace CutoverPlanner.Web.Migrations
                     b.Property<int>("IdMarco")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("IdPlano")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("IdSistema")
                         .HasColumnType("INTEGER");
 
@@ -60,9 +63,6 @@ namespace CutoverPlanner.Web.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Observacao")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PredecessorasRaw")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("RiscoGoLive")
@@ -83,6 +83,8 @@ namespace CutoverPlanner.Web.Migrations
                     b.HasIndex("IdExecutor");
 
                     b.HasIndex("IdMarco");
+
+                    b.HasIndex("IdPlano");
 
                     b.HasIndex("IdSistema");
 
@@ -127,6 +129,27 @@ namespace CutoverPlanner.Web.Migrations
                     b.ToTable("Marcos");
                 });
 
+            modelBuilder.Entity("CutoverPlanner.Domain.Models.Plano", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("Inicio")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("Termino")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planos");
+                });
+
             modelBuilder.Entity("CutoverPlanner.Domain.Models.Sistema", b =>
                 {
                     b.Property<int>("Id")
@@ -161,6 +184,12 @@ namespace CutoverPlanner.Web.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("CutoverPlanner.Domain.Models.Plano", "Plano")
+                        .WithMany("Atividades")
+                        .HasForeignKey("IdPlano")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("CutoverPlanner.Domain.Models.Sistema", "Sistema")
                         .WithMany("Atividades")
                         .HasForeignKey("IdSistema")
@@ -170,6 +199,8 @@ namespace CutoverPlanner.Web.Migrations
                     b.Navigation("Executor");
 
                     b.Navigation("Marco");
+
+                    b.Navigation("Plano");
 
                     b.Navigation("Sistema");
                 });
@@ -209,6 +240,11 @@ namespace CutoverPlanner.Web.Migrations
                 });
 
             modelBuilder.Entity("CutoverPlanner.Domain.Models.Marco", b =>
+                {
+                    b.Navigation("Atividades");
+                });
+
+            modelBuilder.Entity("CutoverPlanner.Domain.Models.Plano", b =>
                 {
                     b.Navigation("Atividades");
                 });

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CutoverPlanner.Web.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Inicio : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,6 +37,21 @@ namespace CutoverPlanner.Web.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Marcos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Planos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Nome = table.Column<string>(type: "TEXT", nullable: false),
+                    Inicio = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    Termino = table.Column<DateTime>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Planos", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -86,6 +101,7 @@ namespace CutoverPlanner.Web.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    IdPlano = table.Column<int>(type: "INTEGER", nullable: false),
                     IdSistema = table.Column<int>(type: "INTEGER", nullable: false),
                     IdExecutor = table.Column<int>(type: "INTEGER", nullable: false),
                     IdMarco = table.Column<int>(type: "INTEGER", nullable: false),
@@ -95,8 +111,7 @@ namespace CutoverPlanner.Web.Migrations
                     Inicio = table.Column<DateTime>(type: "TEXT", nullable: true),
                     Termino = table.Column<DateTime>(type: "TEXT", nullable: true),
                     Observacao = table.Column<string>(type: "TEXT", nullable: true),
-                    LinkRepositorio = table.Column<string>(type: "TEXT", nullable: true),
-                    PredecessorasRaw = table.Column<string>(type: "TEXT", nullable: true)
+                    LinkRepositorio = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -111,6 +126,12 @@ namespace CutoverPlanner.Web.Migrations
                         name: "FK_Atividades_Marcos_IdMarco",
                         column: x => x.IdMarco,
                         principalTable: "Marcos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Atividades_Planos_IdPlano",
+                        column: x => x.IdPlano,
+                        principalTable: "Planos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -130,6 +151,11 @@ namespace CutoverPlanner.Web.Migrations
                 name: "IX_Atividades_IdMarco",
                 table: "Atividades",
                 column: "IdMarco");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Atividades_IdPlano",
+                table: "Atividades",
+                column: "IdPlano");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Atividades_IdSistema",
@@ -158,6 +184,9 @@ namespace CutoverPlanner.Web.Migrations
 
             migrationBuilder.DropTable(
                 name: "Marcos");
+
+            migrationBuilder.DropTable(
+                name: "Planos");
 
             migrationBuilder.DropTable(
                 name: "Sistemas");

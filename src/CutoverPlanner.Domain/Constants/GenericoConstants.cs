@@ -2,9 +2,6 @@
 {
     public static class GenericoConstants
     {
-        public const string Generico = "Genérico";
-        public const string Generica = "Genérica";
-
         public const string AreaGeadOperacaoDespacho = "GEAD/OPERAÇÃO DESPACHO";
         public const string AreaGeadOperacaoManutencao = "GEAD/OPERAÇÃO MANUTENÇÃO";
         public const string AreaGeadCanaisConvencionais = "GEAD/CANAIS CONVENCIONAIS";
@@ -19,5 +16,9 @@
         public const string AreaNA = "N/A";
 
         public const string SistemaNA = "N/A";
+
+        public const string ExecutorNA = "N/A";
+
+        public const string MarcoNA = "N/A";
     }
 }

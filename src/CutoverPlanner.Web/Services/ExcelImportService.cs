@@ -224,7 +224,7 @@ namespace CutoverPlanner.Web.Services
                 executor = new Executor()
                 {
                     Nome = nome,
-                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.Generica).Id
+                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.AreaNA).Id
                 };
 
                 await _executorService.CreateAsync(executor);
@@ -245,7 +245,7 @@ namespace CutoverPlanner.Web.Services
                 sistema = new Sistema
                 {
                     Nome = nome,
-                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.Generica).Id
+                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.AreaNA).Id
                 };
 
                 await _sistemaService.CreateAsync(sistema);

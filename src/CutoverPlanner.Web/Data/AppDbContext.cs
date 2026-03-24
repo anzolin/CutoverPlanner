@@ -11,6 +11,7 @@ namespace CutoverPlanner.Web.Data
         public DbSet<Atividade> Atividades => Set<Atividade>();
         public DbSet<Executor> Executores => Set<Executor>();
         public DbSet<Marco> Marcos => Set<Marco>();
+        public DbSet<Plano> Planos => Set<Plano>();
         public DbSet<Sistema> Sistemas => Set<Sistema>();
         
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -22,13 +23,7 @@ namespace CutoverPlanner.Web.Data
                 new Area()
                 {
                     Nome = GenericoConstants.AreaNA,
-                    NomeResponsavel = "-",
-                    EmailResponsavel = ""
-                },
-                new Area()
-                {
-                    Nome = GenericoConstants.Generica,
-                    NomeResponsavel = "-",
+                    NomeResponsavel = GenericoConstants.AreaNA,
                     EmailResponsavel = ""
                 },
                 new Area()
@@ -120,17 +115,27 @@ namespace CutoverPlanner.Web.Data
                 },
                 new Sistema()
                 {
-                    Nome = GenericoConstants.Generico,
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.Generica).Id
-                },
-                new Sistema()
-                {
                     Nome = "SICCO",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadFaturamento).Id
                 },
                 new Sistema()
                 {
                     Nome = "SICNT",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SIGOD",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SIGODPDA",
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
+                },
+                new Sistema()
+                {
+                    Nome = "SIPDA",
                     IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaGeadOperacaoDespacho).Id
                 },
                 new Sistema()
@@ -176,9 +181,9 @@ namespace CutoverPlanner.Web.Data
             {
                 new Executor()
                 {
-                    Nome = GenericoConstants.Generico,
+                    Nome = GenericoConstants.ExecutorNA,
                     Email = "",
-                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.Generica).Id
+                    IdArea = this.Areas.First(q => q.Nome == GenericoConstants.AreaNA).Id
                 },
                 new Executor()
                 {
@@ -420,6 +425,26 @@ namespace CutoverPlanner.Web.Data
             }
 
             #endregion
+
+            #region Marcos
+
+            var marcos = new List<Marco>
+            {
+                new Marco()
+                {
+                    Nome = GenericoConstants.MarcoNA
+                },
+            };
+
+            foreach (var marco in marcos)
+            {
+                if (!this.Marcos.Any(q => q.Nome.Equals(marco.Nome)))
+                    this.Add(marco);
+
+                this.SaveChanges();
+            }
+
+            #endregion
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -431,6 +456,7 @@ namespace CutoverPlanner.Web.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Atividade>()
                 .HasOne(d => d.Sistema)
                 .WithMany(a => a.Atividades)
@@ -441,6 +467,12 @@ namespace CutoverPlanner.Web.Data
                 .HasOne(d => d.Executor)
                 .WithMany(a => a.Atividades)
                 .HasForeignKey(d => d.IdExecutor)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Atividade>()
+                .HasOne(d => d.Plano)
+                .WithMany(a => a.Atividades)
+                .HasForeignKey(d => d.IdPlano)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Atividade>()
