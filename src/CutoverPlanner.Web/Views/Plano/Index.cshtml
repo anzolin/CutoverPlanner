@@ -13,28 +13,63 @@
         <tr>
             <th>#</th>
             <th>Nome</th>
+            <th>Progresso</th>
             <th>Início</th>
             <th>Término</th>
             <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model)
-{
-        <tr>
-            <td>@item.Id</td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">
-                    <strong>@item.Nome</strong>
-                </a>
-            </td>
-            <td>@item.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
-            <td>@item.Termino?.ToString("dd/MM/yyyy HH:mm")</td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                        <strong>@item.Nome</strong>
+                    </a>
+                </td>
+                <td>
+                    @{
+                        var total = item.Atividades.Count();
+                        var concluidas = item.Atividades.Count(a => a.Status == StatusAtividade.Concluido);
+                        var porcentagem = total > 0 ? (int)(concluidas * 100.0 / total) : 0;
+
+                        var estilo = "";
+
+                        switch (porcentagem)
+                        {
+                            case < 25:
+                                estilo = "bg-danger";
+                                break;
+                            case >= 25 and < 65:
+                                estilo = "bg-warning";
+                                break;
+                            case >= 65 and < 100:
+                                estilo = "bg-primary";
+                                break;
+                            case 100:
+                                estilo = "bg-success";
+                                break;
+                            default:
+                                estilo = "bg-secondary";
+                                break;
+                        }
+                    }
+                    <div class="progress progress-sm active">
+                        <div class="progress-bar @(estilo) progress-bar-striped" role="progressbar" aria-valuenow="@(porcentagem)" aria-valuemin="0" aria-valuemax="100" style="width: @(porcentagem)%">
+                            <span class="sr-only">@(porcentagem)% completo</span>
+                        </div>
+                    </div>
+                    <code>@(porcentagem)% completo</code>
+                </td>
+                <td>@item.Inicio?.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.Termino?.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
