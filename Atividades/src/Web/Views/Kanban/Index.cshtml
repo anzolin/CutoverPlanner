@@ -1,0 +1,157 @@
+@model IEnumerable<CutoverManager.Application.DTOs.AtividadeDTO>
+
+@{
+    ViewData["Title"] = "Kanban de Atividades";
+
+    var atividades = Model.ToList();
+
+    var naoIniciado = atividades.Where(a => a.Status == CutoverManager.Domain.Enums.StatusAtividade.NaoIniciado);
+    var emAndamento = atividades.Where(a => a.Status == CutoverManager.Domain.Enums.StatusAtividade.EmAndamento);
+    var concluido = atividades.Where(a => a.Status == CutoverManager.Domain.Enums.StatusAtividade.Concluido);
+}
+
+<style>
+    .kanban-col {
+        min-height: 400px;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        overflow-y: auto;
+    }
+
+    .kanban-item {
+        background: white;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        cursor: move;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        transition: background 0.2s;
+    }
+
+        .kanban-item:hover {
+            background: #eef5ff;
+        }
+
+    .kanban-title {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .column-title {
+        font-weight: bold;
+        font-size: 17px;
+    }
+</style>
+
+
+<div class="row">
+
+    <!-- NÃO INICIADO -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="column-title"><i class="fas fa-hourglass-start"></i> Não iniciado</h5>
+            </div>
+
+            <div class="card-body kanban-col" data-status="0">
+                @foreach (var a in naoIniciado)
+                {
+                    <div class="kanban-item" draggable="true" data-id="@a.Id">
+                        <small class="text-muted">@a.ExecutorNome</small><br />
+                        <div class="kanban-title">@a.Titulo</div>
+                        <small class="text-muted ali">De @a.Inicio.ToString("dd/MM HH:mm") até @a.Termino.ToString("dd/MM HH:mm")</small>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- EM ANDAMENTO -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="column-title"><i class="fas fa-play"></i> Em andamento</h5>
+            </div>
+
+            <div class="card-body kanban-col" data-status="1">
+                @foreach (var a in emAndamento)
+                {
+                    <div class="kanban-item" draggable="true" data-id="@a.Id">
+                        <small class="text-muted">@a.ExecutorNome</small><br />
+                        <div class="kanban-title">@a.Titulo</div>
+                        <small class="text-muted">De @a.Inicio.ToString("dd/MM HH:mm") até @a.Termino.ToString("dd/MM HH:mm")</small>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- CONCLUÍDO -->
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h5 class="column-title"><i class="fas fa-check-circle"></i> Concluído</h5>
+            </div>
+
+            <div class="card-body kanban-col" data-status="2">
+                @foreach (var a in concluido)
+                {
+                    <div class="kanban-item" draggable="true" data-id="@a.Id">
+                        <small class="text-muted">@a.ExecutorNome</small><br />
+                        <div class="kanban-title">@a.Titulo</div>
+                        <small class="text-muted">De @a.Inicio.ToString("dd/MM HH:mm") até @a.Termino.ToString("dd/MM HH:mm")</small>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        let dragged = null;
+
+        // Registrar arraste
+        document.querySelectorAll('.kanban-item').forEach(item => {
+            item.addEventListener('dragstart', e => {
+                dragged = item;
+                e.dataTransfer.effectAllowed = 'move';
+            });
+        });
+
+        // Registrar drop
+        document.querySelectorAll('.kanban-col').forEach(col => {
+
+            col.addEventListener('dragover', e => {
+                e.preventDefault();
+            });
+
+            col.addEventListener('drop', e => {
+                e.preventDefault();
+                if (!dragged) return;
+
+                col.appendChild(dragged);
+
+                // CAPTURA COMO NÚMEROS — solução do problema do "0"
+                const idAtividade = Number(dragged.dataset.id);
+                const novoStatus = Number(col.dataset.status);
+
+                // Enviar atualização
+                fetch('/Kanban/AlterarStatus', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        idAtividade: idAtividade,
+                        novoStatus: novoStatus
+                    })
+                })
+                .then(r => r.ok ? console.log("Status atualizado") : console.error("Erro ao atualizar"));
+            });
+
+        });
+    </script>
+}

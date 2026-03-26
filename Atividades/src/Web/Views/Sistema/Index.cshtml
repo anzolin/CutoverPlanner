@@ -1,0 +1,53 @@
+@model IEnumerable<CutoverManager.Application.DTOs.SistemaDTO>
+@{
+    ViewData["Title"] = "Sistemas";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h3 class="card-title mb-0">
+            <i class="fas fa-server"></i> Sistemas
+        </h3>
+
+        <a href="/Sistema/Create">
+            <i class="fas fa-plus"></i> Novo Sistema
+        </a>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Área</th>
+                    <th>Nome</th>
+                    <th style="width:150px;">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var s in Model)
+                {
+                    var area = ((IEnumerable<CutoverManager.Application.DTOs.AreaDTO>)ViewBag.Areas)
+                               .FirstOrDefault(a => a.Id == s.IdArea);
+
+                    <tr>
+                        <td>@area?.Nome</td>
+                        <td><strong>@s.Nome</strong></td>
+                        <td>
+                            <a href="/Sistema/Edit/@s.Id" class="btn btn-sm btn-info">
+                                <i class="fas fa-edit"></i>
+                            </a>
+
+                            <a href="/Sistema/Delete/@s.Id" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

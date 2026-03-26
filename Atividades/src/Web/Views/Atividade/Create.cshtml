@@ -1,0 +1,72 @@
+﻿@model CutoverManager.Application.DTOs.AtividadeDTO
+@{
+    ViewData["Title"] = "Nova Atividade";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h4><i class="fas fa-plus"></i> Nova Atividade</h4>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post">
+            <input type="hidden" asp-for="IdPlano" />
+
+            <div class="form-group">
+                <label>Título *</label>
+                <input asp-for="Titulo" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Sistema</label>
+                <select asp-for="IdSistema" class="form-control" asp-items="@(new SelectList(ViewBag.SistemaList, "Id", "Nome"))"></select>
+            </div>
+
+            <div class="form-group">
+                <label>Marco</label>
+                <select asp-for="IdMarco" class="form-control" asp-items="@(new SelectList(ViewBag.MarcoList, "Id", "Nome"))"></select>
+            </div>
+
+            <div class="form-group">
+                <label>Executor</label>
+                <select asp-for="IdExecutor" class="form-control" asp-items="@(new SelectList(ViewBag.ExecutorList, "Id", "Nome"))"></select>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <label>Início</label>
+                    <input asp-for="Inicio" type="datetime-local" class="form-control" />
+                </div>
+                <div class="col">
+                    <label>Término</label>
+                    <input asp-for="Termino" type="datetime-local" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Status</label>
+                <select asp-for="Status" class="form-control"
+                        asp-items="Html.GetEnumSelectList<CutoverManager.Domain.Enums.StatusAtividade>()"></select>
+            </div>
+
+            <div class="form-group">
+                <label>Risco GoLive</label>
+                <select asp-for="RiscoGoLive" class="form-control">
+                    <option value="false">Não</option>
+                    <option value="true">Sim</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Observação</label>
+                <textarea asp-for="Observacao" class="form-control"></textarea>
+            </div>
+
+            <button class="btn btn-success"><i class="fas fa-save"></i> Salvar</button>
+
+            <a href="/Atividade/Index?idPlano=@Model.IdPlano">Voltar</a>
+        </form>
+
+    </div>
+</div>

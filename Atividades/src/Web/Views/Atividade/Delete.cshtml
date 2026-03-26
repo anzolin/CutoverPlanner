@@ -1,0 +1,25 @@
+﻿@model CutoverManager.Application.DTOs.AtividadeDTO
+@{
+    ViewData["Title"] = "Excluir Atividade";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-danger text-white">
+        <h4><i class="fas fa-trash"></i> Excluir Atividade</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p>
+            Confirma a exclusão da atividade:<br />
+            <strong>@Model.Titulo</strong>?
+        </p>
+
+        <form method="post">
+            <button class="btn btn-danger"><i class="fas fa-trash"></i> Excluir</button>
+
+            <a href="/Atividade/Index?idPlano=@Model.IdPlano"></a>Voltar</a>
+        </form>
+
+    </div>
+</div>

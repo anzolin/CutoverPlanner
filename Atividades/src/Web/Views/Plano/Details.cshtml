@@ -1,0 +1,31 @@
+﻿@model CutoverManager.Application.DTOs.PlanoDTO
+@{
+    ViewData["Title"] = "Detalhes do Plano";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-dark text-white">
+        <h4 class="mb-0"><i class="fas fa-info-circle"></i> Detalhes do Plano</h4>
+    </div>
+
+    <div class="card-body">
+
+        <dl class="row">
+            <dt class="col-sm-3">Nome:</dt>
+            <dd class="col-sm-9">@Model.Nome</dd>
+
+            <dt class="col-sm-3">Início:</dt>
+            <dd class="col-sm-9">@Model.Inicio.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-3">Término:</dt>
+            <dd class="col-sm-9">@Model.Termino.ToString("dd/MM/yyyy")</dd>
+
+            <dt class="col-sm-3">Status:</dt>
+            <dd class="col-sm-9">@Model.Status</dd>
+        </dl>
+
+        <a href="/Plano/Edit/@Model.Id" class="btn btn-info"><i class="fas fa-edit"></i> Editar</a>
+        <a href="/Plano" class="btn btn-secondary ml-2">Voltar</a>
+
+    </div>
+</div>

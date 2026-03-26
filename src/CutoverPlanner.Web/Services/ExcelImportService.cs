@@ -221,10 +221,11 @@ namespace CutoverPlanner.Web.Services
 
             if (executor == null)
             {
+                area = area ?? GenericoConstants.AreaNA;
                 executor = new Executor()
                 {
                     Nome = nome,
-                    IdArea = _areaService.GetByNomeAsync(GenericoConstants.AreaNA).Id
+                    IdArea = _areaService.GetByNomeAsync(area).Id
                 };
 
                 await _executorService.CreateAsync(executor);

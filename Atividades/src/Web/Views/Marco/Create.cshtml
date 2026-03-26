@@ -1,0 +1,30 @@
+@model CutoverManager.Application.DTOs.MarcoDTO
+@{
+    ViewData["Title"] = "Novo Marco";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h4><i class="fas fa-plus"></i> Novo Marco</h4>
+    </div>
+
+    <div class="card-body">
+
+        <form method="post">
+
+            <div class="form-group">
+                <label>Nome *</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <button class="btn btn-success">
+                <i class="fas fa-save"></i> Salvar
+            </button>
+
+            <a href="/Marco">Voltar</a>
+
+        </form>
+
+    </div>
+</div>

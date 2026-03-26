@@ -1,0 +1,55 @@
+@model IEnumerable<CutoverManager.Application.DTOs.ExecutorDTO>
+@{
+    ViewData["Title"] = "Executores";
+}
+
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h3 class="card-title mb-0">
+            <i class="fas fa-user"></i> Executores
+        </h3>
+
+        <a href="/Executor/Create">
+            <i class="fas fa-plus"></i> Novo Executor
+        </a>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Área</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th style="width: 150px">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var e in Model)
+                {
+                    var area = ((IEnumerable<CutoverManager.Application.DTOs.AreaDTO>)ViewBag.Areas)
+                               .FirstOrDefault(a => a.Id == e.IdArea);
+
+                    <tr>
+                        <td>@area?.Nome</td>
+                        <td><strong>@e.Nome</strong></td>
+                        <td>@e.Email</td>
+                    <td>
+                        <a href="/Executor/Edit/@e.Id" class="btn btn-sm btn-info">
+                            <i class="fas fa-edit"></i>
+                        </a>
+
+                        <a href="/Executor/Delete/@e.Id" class="btn btn-sm btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

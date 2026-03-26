@@ -1,0 +1,208 @@
+@model IEnumerable<CutoverManager.Application.DTOs.AtividadeDTO>
+
+@{
+    ViewData["Title"] = "Atividades";
+
+    var plano = ViewBag.Plano;
+
+    // CORREÇÃO: tipar o GroupBy para evitar dynamic
+    IEnumerable<IGrouping<int, CutoverManager.Application.DTOs.AtividadeDTO>> grupos =
+        Model.GroupBy(x => x.IdMarco)
+             .OrderBy(g => g.Min(a => a.Inicio));
+}
+
+<div class="card shadow-sm">
+
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h4 class="mb-0"><i class="fas fa-tasks"></i> Atividades do Plano: @plano.Nome</h4>
+
+        <div>
+            <a href="/Atividade/Create/@plano.Id">Nova Atividade</a>
+
+            <a href="/Atividade/ExportarExcel?idPlano=@plano.Id">
+                <i class="fas fa-file-excel"></i> Exportar
+            </a>
+
+            <button class="btn btn-secondary" data-toggle="modal" data-target="#importModal">
+                <i class="fas fa-upload"></i> Importar
+            </button>
+
+            <a href="/Atividade/ApagarTodas?idPlano=@plano.Id">
+                <i class="fas fa-trash"></i> Excluir Todas
+            </a>
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <!-- FILTROS CORRIGIDOS -->
+        <form method="get" class="mb-4">
+            <input type="hidden" name="idPlano" value="@plano.Id" />
+
+            <div class="form-row">
+
+                <div class="col-md-3">
+                    <label>Área</label>
+                    <select name="idArea" class="form-control" asp-items="@(new SelectList(ViewBag.AreaList, "Id", "Nome"))">
+                        <option value="">-- Todas --</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label>Marco</label>
+                    <select name="idMarco" class="form-control" asp-items="@(new SelectList(ViewBag.MarcoList, "Id", "Nome"))">
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label>Sistema</label>
+                    <select name="idSistema" class="form-control"
+                            asp-items="@(new SelectList(ViewBag.SistemaList, "Id", "Nome"))">
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label>Status</label>
+                    <select name="status" class="form-control"
+                            asp-items="Html.GetEnumSelectList<CutoverManager.Domain.Enums.StatusAtividade>()">
+                        <option value="">-- Todos --</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-row mt-3">
+
+                <div class="col-md-3">
+                    <label>Atrasadas</label>
+                    <select name="atrasadas" class="form-control">
+                        <option value="">Todos</option>
+                        <option value="true">Somente atrasadas</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 d-flex align-items-end">
+                    <button class="btn btn-secondary"><i class="fas fa-filter"></i> Filtrar</button>
+                </div>
+
+            </div>
+        </form>
+
+        <!-- AGRUPAMENTO POR MARCO -->
+        @foreach (var grupo in grupos)
+        {
+            var marcoObj =
+                ((IEnumerable<CutoverManager.Application.DTOs.MarcoDTO>)ViewBag.MarcoList)
+                .FirstOrDefault(m => m.Id == grupo.Key);
+
+            <div class="card mb-4 border-info">
+                <div class="card-header bg-info text-white">
+                    <i class="fas fa-flag"></i> Marco: @marcoObj?.Nome
+                </div>
+
+                <div class="card-body p-0">
+
+                    <table class="table table-hover table-bordered table-sm m-0">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Sistema</th>
+                                <th>Executor</th>
+                                <th>Status</th>
+                                <th>Inicio</th>
+                                <th>Término</th>
+                                <th>Risco</th>
+                                <th style="width: 100px;">Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var a in grupo.OrderBy(x => x.Inicio))
+                            {
+                                var sistema = ((IEnumerable<CutoverManager.Application.DTOs.SistemaDTO>)ViewBag.SistemaList)
+                                              .FirstOrDefault(s => s.Id == a.IdSistema);
+                                var exec = ((IEnumerable<CutoverManager.Application.DTOs.ExecutorDTO>)ViewBag.ExecutorList)
+                                           .FirstOrDefault(e => e.Id == a.IdExecutor);
+
+                                <tr>
+                                    <td>@a.Titulo</td>
+                                    <td>@sistema?.Nome</td>
+                                    <td>@exec?.Nome</td>
+
+                                    <td>
+                                    @if (a.Status == CutoverManager.Domain.Enums.StatusAtividade.NaoIniciado)
+                                        {
+                                            <span class="badge badge-secondary">Não iniciado</span>
+                                        }
+                                    else if (a.Status == CutoverManager.Domain.Enums.StatusAtividade.EmAndamento)
+                                        {
+                                            <span class="badge badge-primary">Em andamento</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success">Concluído</span>
+                                        }
+                                    </td>
+
+                                    <td>@a.Inicio.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@a.Termino.ToString("dd/MM/yyyy HH:mm")</td>
+
+                                    <td>
+                                        @if (a.RiscoGoLive)
+                                        {
+                                            <span class="badge badge-danger">Sim</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-success">Não</span>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        <a href="/Atividade/Edit/@a.Id"><i class="fas fa-edit"></i></a>
+                                        <a href="/Atividade/Delete/@a.Id"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
+
+<!-- MODAL IMPORTAR EXCEL -->
+<div class="modal fade" id="importModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="ImportarExcel" asp-controller="Atividade" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" name="idPlano" value="@plano.Id" />
+
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-upload"></i> Importar Excel</h5>
+                    #
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Arquivo Excel</label>
+                        <input type="file" name="arquivo" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-success"><i class="fas fa-upload"></i> Importar</button>
+                    #
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

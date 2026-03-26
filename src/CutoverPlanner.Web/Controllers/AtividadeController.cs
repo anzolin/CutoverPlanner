@@ -172,7 +172,12 @@ namespace CutoverPlanner.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult ImportarExcel() => View();
+        public async Task<IActionResult> ImportarExcel()
+        {
+            ViewBag.Planos = new SelectList(await _planoService.GetAllAsync(), "Id", "Nome");
+
+            return View();
+        }
 
         [HttpPost]
         [RequestSizeLimit(104857600)]

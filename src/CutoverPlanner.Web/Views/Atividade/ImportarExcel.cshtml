@@ -4,6 +4,10 @@
 
 <h2>Importar Planilha (.xlsx)</h2>
 <form method="post" enctype="multipart/form-data" asp-action="ImportarExcelUpload">
+<div class="form-group">
+        <label>Plano</label>
+        <select class="form-control" asp-items="ViewBag.Planos"></select>
+    </div>
   <input type="file" name="file" accept=".xlsx" class="form-control w-50" />
   <button class="btn btn-primary mt-2" type="submit">Importar</button>
 </form>

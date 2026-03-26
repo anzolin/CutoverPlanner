@@ -27,7 +27,12 @@ namespace CutoverPlanner.Web.Repositories
 
         public async Task<IEnumerable<Plano>> GetAllAsync()
         {
-            return await _db.Planos.AsNoTracking().Include(i => i.Atividades).OrderBy(ob => ob.Nome).ToListAsync();
+            return await _db.Planos
+                .AsNoTracking()
+                .Include(i => i.Atividades)
+                .OrderByDescending(ob => ob.Inicio)
+                .ThenBy(ob => ob.Nome)
+                .ToListAsync();
         }
 
         public async Task<Plano?> GetByIdAsync(int id)

@@ -1,0 +1,119 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row">
+
+    <!-- CARD: Progresso por Status -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-left-primary">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-tasks"></i> Progresso por Status
+                </h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    @foreach (var s in ViewBag.Status)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @s.Status
+                            <span class="badge badge-primary badge-pill">@s.Total</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD: Progresso por Área -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-left-success">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-building"></i> Progresso por Área
+                </h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    @foreach (var a in ViewBag.Area)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @a.Area
+                            <span class="badge badge-success badge-pill">@a.Total</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD: Progresso por Marco -->
+    <div class="col-md-4">
+        <div class="card shadow-sm border-left-info">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-flag"></i> Progresso por Marco
+                </h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    @foreach (var m in ViewBag.Marco)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @m.Marco
+                            <span class="badge badge-info badge-pill">@m.Total</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<hr class="my-4" />
+
+<!-- LISTA DE ATIVIDADES COM RISCO GOLIVE -->
+<div class="card shadow-sm">
+    <div class="card-header bg-danger text-white">
+        <h5 class="mb-0">
+            <i class="fas fa-exclamation-triangle"></i> Atividades com Risco GoLive
+        </h5>
+    </div>
+
+    <div class="card-body">
+
+        @if (ViewBag.Riscos.Count == 0)
+        {
+            <div class="alert alert-success">
+                Nenhuma atividade com risco de GoLive encontrada.
+            </div>
+        }
+        else
+        {
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Plano</th>
+                        <th>Total com Risco</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var r in ViewBag.Riscos)
+                    {
+                        <tr>
+                            <td>@r.Plano</td>
+                            <td>
+                                <span class="badge badge-danger">@r.Total</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </div>
+</div>
