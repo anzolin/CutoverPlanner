@@ -3,46 +3,55 @@ using CutoverManager.Application.Interfaces;
 using CutoverManager.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CutoverManger.Web.Controllers
+namespace CutoverManager.Web.Controllers;
+
+public class KanbanController : Controller
 {
-    public class KanbanController : Controller
+    private readonly IAtividadeService _atividadeService;
+    private readonly IPlanoService _planoService;
+
+    public KanbanController(IAtividadeService atividadeService,
+                            IPlanoService planoService)
     {
-        private readonly IAtividadeService _service;
+        _atividadeService = atividadeService;
+        _planoService = planoService;
+    }
 
-        public KanbanController(IAtividadeService service)
+    public async Task<IActionResult> Index(int? idPlano)
+    {
+        // Se nenhum plano foi informado → mostra seletor de plano
+        if (idPlano == null)
         {
-            _service = service;
+            ViewBag.Planos = await _planoService.ListarAsync();
+
+            return View("SelecionarPlano");
         }
 
-        public async Task<IActionResult> Index(int idPlano)
-        {
-            if (idPlano <= 0)
-                return BadRequest("Plano inválido.");
+        ViewBag.IdPlano = idPlano.Value;
+        ViewBag.Planos = await _planoService.ListarAsync();
 
-            var atividades = await _service.ListarPorPlanoAsync(idPlano);
-            ViewBag.IdPlano = idPlano;
+        var atividades = await _atividadeService.ListarPorPlanoAsync(idPlano.Value);
 
-            return View(atividades);
-        }
+        return View(atividades);
+    }
 
-        [HttpPost]
-        public async Task<IActionResult> AlterarStatus([FromBody] AlterarStatusDTO dto)
-        {
-            if (dto == null)
-                return BadRequest("Dados inválidos.");
+    [HttpPost]
+    public async Task<IActionResult> AlterarStatus([FromBody] AlterarStatusDTO dto)
+    {
+        if (dto == null)
+            return BadRequest("Dados inválidos.");
 
-            // Validação básica
-            if (dto.IdAtividade <= 0)
-                return BadRequest("Atividade inválida.");
+        // Validação básica
+        if (dto.IdAtividade <= 0)
+            return BadRequest("Atividade inválida.");
 
-            if (!Enum.IsDefined(typeof(StatusAtividade), dto.NovoStatus))
-                return BadRequest("Status inválido.");
+        if (!Enum.IsDefined(typeof(StatusAtividade), dto.NovoStatus))
+            return BadRequest("Status inválido.");
 
-            var statusEnum = (StatusAtividade)dto.NovoStatus;
+        var statusEnum = (StatusAtividade)dto.NovoStatus;
 
-            await _service.AlterarStatusAsync(dto.IdAtividade, statusEnum);
+        await _atividadeService.AlterarStatusAsync(dto.IdAtividade, statusEnum);
 
-            return Ok(new { sucesso = true });
-        }
+        return Ok(new { sucesso = true });
     }
 }

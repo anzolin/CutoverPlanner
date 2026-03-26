@@ -172,7 +172,7 @@ public class AtividadeController : Controller
 
         return File(bytes,
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            "atividades.xlsx");
+            $"Atividades_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx");
     }
 
     public async Task<IActionResult> CopiarAtividades(int origem, int destino)
