@@ -38,27 +38,27 @@ public class AtividadeService : IAtividadeService
         bool? atrasadas,
         int? idMarco,
         int? idSistema,
-        StatusAtividade? status
-    )
+        StatusAtividade? status)
     {
         var q = _repo.Query()
-            .Where(a => a.IdPlano == idPlano)
-            .Include(a => a.Executor).ThenInclude(e => e.Area);
+            .Where(a => a.IdPlano == idPlano);
 
-        //if (idArea.HasValue)
-        //    q = q.Where(a => a.Executor.IdArea == idArea.Value);
+        if (idArea.HasValue)
+            q = q.Where(a => a.Executor.IdArea == idArea.Value);
 
-        //if (idMarco.HasValue)
-        //    q = q.Where(a => a.IdMarco == idMarco.Value);
+        if (idMarco.HasValue)
+            q = q.Where(a => a.IdMarco == idMarco.Value);
 
-        //if (idSistema.HasValue)
-        //    q = q.Where(a => a.IdSistema == idSistema.Value);
+        if (idSistema.HasValue)
+            q = q.Where(a => a.IdSistema == idSistema.Value);
 
-        //if (status.HasValue)
-        //    q = q.Where(a => a.Status == status.Value);
+        if (status.HasValue)
+            q = q.Where(a => a.Status == status.Value);
 
-        //if (atrasadas == true)
-        //    q = q.Where(a => a.Termino < DateTime.Now && a.Status != StatusAtividade.Concluido);
+        if (atrasadas == true)
+            q = q.Where(a => a.Termino < DateTime.Now && a.Status != StatusAtividade.Concluido);
+
+        q = q.Include(a => a.Executor).ThenInclude(e => e.Area);
 
         return await q
             .OrderBy(a => a.Inicio)

@@ -1,5 +1,6 @@
 using CutoverManager.Application.DTOs;
 using CutoverManager.Application.Interfaces;
+using CutoverManager.Domain.Enums;
 using CutoverManager.Infrastructure.Excel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,7 +31,13 @@ public class AtividadeController : Controller
         _executorService = executorService;
     }
 
-    public async Task<IActionResult> Index(int? idPlano)
+    public async Task<IActionResult> Index(
+        int? idPlano,
+        int? idArea,
+        int? idMarco,
+        int? idSistema,
+        StatusAtividade? status,
+        bool? atrasadas)
     {
         if (idPlano == null)
         {
@@ -45,7 +52,7 @@ public class AtividadeController : Controller
         ViewBag.SistemaList = await _sistemaService.ListarAsync();
         ViewBag.ExecutorList = await _executorService.ListarAsync();
 
-        var lista = await _service.ListarPorPlanoAsync(idPlano.Value);
+        var lista = await _service.FiltrarAsync(idPlano.Value, idArea, atrasadas, idMarco, idSistema, status);
 
         return View(lista);
     }
@@ -141,6 +148,7 @@ public class AtividadeController : Controller
     public async Task<IActionResult> Delete(int id)
     {
         var dto = await _service.ObterPorIdAsync(id);
+
         return View(dto);
     }
 
@@ -148,6 +156,7 @@ public class AtividadeController : Controller
     public async Task<IActionResult> DeleteConfirm(int id)
     {
         var dto = await _service.ObterPorIdAsync(id);
+
         await _service.RemoverAsync(id);
 
         return RedirectToAction(nameof(Index), new { idPlano = dto!.IdPlano });
@@ -156,11 +165,14 @@ public class AtividadeController : Controller
     [HttpPost]
     public async Task<IActionResult> ImportarExcel(int idPlano, IFormFile arquivo)
     {
-        using var stream = arquivo.OpenReadStream();
-        var listaDtos = ExcelImportService.LerAtividades(stream, idPlano);
+        if (arquivo == null || arquivo.Length == 0)
+            return BadRequest("Nenhum arquivo enviado.");
 
-        foreach (var dto in listaDtos)
-            await _service.CriarAsync(dto);
+        using var stream = arquivo.OpenReadStream();
+        var atividades = ExcelImportService.LerAtividades(stream, idPlano);
+
+        foreach (var a in atividades)
+            await _service.CriarAsync(a);
 
         return RedirectToAction(nameof(Index), new { idPlano });
     }
@@ -178,12 +190,14 @@ public class AtividadeController : Controller
     public async Task<IActionResult> CopiarAtividades(int origem, int destino)
     {
         await _service.CopiarAtividadesAsync(origem, destino);
+
         return RedirectToAction(nameof(Index), new { idPlano = destino });
     }
 
     public async Task<IActionResult> ApagarTodas(int idPlano)
     {
         await _service.RemoverTodasDoPlanoAsync(idPlano);
+
         return RedirectToAction(nameof(Index), new { idPlano });
     }
 }

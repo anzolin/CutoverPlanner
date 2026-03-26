@@ -17,17 +17,17 @@
         <h4 class="mb-0"><i class="fas fa-tasks"></i> Atividades do Plano: @plano.Nome</h4>
 
         <div>
-            <a href="/Atividade/Create/@plano.Id">Nova Atividade</a>
+            <a href="/Atividade/Create/@plano.Id" class="btn btn-light text-primary">Nova Atividade</a>
 
-            <a href="/Atividade/ExportarExcel?idPlano=@plano.Id">
+            <a href="/Atividade/ExportarExcel?idPlano=@plano.Id" class="btn btn-light text-primary">
                 <i class="fas fa-file-excel"></i> Exportar
             </a>
 
             <button class="btn btn-secondary" data-toggle="modal" data-target="#importModal">
-                <i class="fas fa-upload"></i> Importar
+                <i class="fas fa-upload"></i> Importar Excel
             </button>
 
-            <a href="/Atividade/ApagarTodas?idPlano=@plano.Id">
+            <a href="/Atividade/ApagarTodas?idPlano=@plano.Id" class="btn btn-light text-danger">
                 <i class="fas fa-trash"></i> Excluir Todas
             </a>
         </div>
@@ -127,9 +127,11 @@
                                            .FirstOrDefault(e => e.Id == a.IdExecutor);
 
                                 <tr>
-                                    <td><strong>@a.Titulo</strong></td>
+                                    <td>@a.Titulo</td>
                                     <td>@sistema?.Nome</td>
-                                    <td>@exec?.Nome</td>
+                                    <td>
+                                        @exec?.Nome
+                                    </td>
 
                                     <td>
                                     @if (a.Status == CutoverManager.Domain.Enums.StatusAtividade.NaoIniciado)
@@ -181,28 +183,43 @@
 <div class="modal fade" id="importModal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form asp-action="ImportarExcel" asp-controller="Atividade" method="post" enctype="multipart/form-data">
 
-                <input type="hidden" name="idPlano" value="@plano.Id" />
+            <form asp-action="ImportarExcel"
+                  method="post"
+                  enctype="multipart/form-data">
+
+                <input type="hidden" name="idPlano" value="@ViewBag.Plano.Id" />
 
                 <div class="modal-header">
-                    <h5 class="modal-title"><i class="fas fa-upload"></i> Importar Excel</h5>
-                    #
+                    <h5 class="modal-title">
+                        <i class="fas fa-upload"></i> Importar Excel
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
                 </div>
 
                 <div class="modal-body">
+
                     <div class="form-group">
-                        <label>Arquivo Excel</label>
+                        <label>Selecione o arquivo Excel</label>
                         <input type="file" name="arquivo" class="form-control" required />
                     </div>
+
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-success"><i class="fas fa-upload"></i> Importar</button>
-                    #
+                    <button class="btn btn-success">
+                        <i class="fas fa-upload"></i> Importar
+                    </button>
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Cancelar
+                    </button>
                 </div>
 
             </form>
+
         </div>
     </div>
 </div>
