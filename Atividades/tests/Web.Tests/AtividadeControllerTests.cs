@@ -27,7 +27,7 @@ public class AtividadeControllerTests
             areaService.Object, marcoService.Object, sistemaService.Object, 
             executorService.Object);
 
-        var result = await ctrl.Index(null);
+        var result = await ctrl.Index(null, null, null, null, null, null);
 
         var view = Assert.IsType<ViewResult>(result);
         Assert.Equal("SelecionarPlano", view.ViewName);

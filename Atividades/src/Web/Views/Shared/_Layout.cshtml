@@ -2,65 +2,52 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-br" data-bs-theme="light">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>@ViewData["Title"] - Cutover Manager</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="~/adminlte/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Tabler Core CSS -->
+    <link href="~/tabler/css/tabler.min.css" rel="stylesheet" />
 
-    <!-- AdminLTE main CSS -->
-    <link rel="stylesheet" href="~/adminlte/dist/css/adminlte.min.css" />
+    <!-- Tabler Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Tabler Additional Plugins (opcional) -->
+    <link href="~/tabler/css/tabler-flags.min.css" rel="stylesheet" />
+    <link href="~/tabler/css/tabler-payments.min.css" rel="stylesheet" />
+    <link href="~/tabler/css/tabler-vendors.min.css" rel="stylesheet" />
 
     @RenderSection("Styles", required: false)
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
-        <script src='~/tabler/js/tabler.min.js'></script>
+<body>
 
-        <!-- Navbar -->
-        @await Html.PartialAsync("_Navbar")
+    <div class="page">
 
-        <!-- Sidebar -->
-        @await Html.PartialAsync("_Sidebar")
+        <!-- Header -->
+        @await Html.PartialAsync("_Header")
 
-        <!-- Main Content -->
-        <div class="content-wrapper">
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
 
-            <!-- Header – título opcional -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <h4 class="text-muted">@ViewData["Title"]</h4>
-                </div>
-            </section>
+            @RenderBody()
 
-            <!-- Conteúdo real da página -->
-            <section class="content">
-                <div class="container-fluid">
-                    @RenderBody()
-                </div>
-            </section>
+            <!-- Footer -->
+            @await Html.PartialAsync("_Footer")
 
         </div>
-
-        <!-- Footer -->
-        @await Html.PartialAsync("_Footer")
-
     </div>
 
-    <!-- jQuery/bootstrap/js/bootstrap.bundle.min.js</script>
 
-    <!-- AdminLTE main JS -->
-    <script src="~/adminlte/dist/js/adminlte.min.js"></script>
+    <!-- Tabler Core JS -->
+    <script src="~/tabler/js/tabler.min.js">"</script>
 
     @RenderSection("Scripts", required: false)
-
 </body>
+
 </html>

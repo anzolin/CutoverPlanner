@@ -1,74 +1,92 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="navbar navbar-vertical navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
 
-    <!-- Brand Logo -->
-    <a href="/" class="brand-link text-center">
-        <span class="brand-text font-weight-light">Cutover Manager</span>
-    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
+        <a href="/">
+            Cutover Manager
+        </a>
 
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
+        <div class="collapse navbar-collapse" id="sidebar-menu">
 
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+            <ul class="navbar-nav pt-lg-3">
 
                 <li class="nav-item">
-                    <a href="/Home" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
-                        <p>Dashboard</p>
+                    <a class="nav-link" href="/Home">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-dashboard"></i>
+                        </span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Plano" class="nav-link">
-                        <i class="nav-icon fas fa-calendar-alt"></i>
-                        <p>Planos</p>
+                    <a class="nav-link" href="/Plano">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-calendar"></i>
+                        </span>
+                        <span>Planos</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Area" class="nav-link">
-                        <i class="nav-icon fas fa-building"></i>
-                        <p>Áreas</p>
+                    <a class="nav-link" href="/Area">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-building"></i>
+                        </span>
+                        <span>Áreas</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Executor" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>Executores</p>
+                    <a class="nav-link" href="/Executor">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-user"></i>
+                        </span>
+                        <span>Executores</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Sistema" class="nav-link">
-                        <i class="nav-icon fas fa-server"></i>
-                        <p>Sistemas</p>
+                    <a class="nav-link" href="/Sistema">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-server"></i>
+                        </span>
+                        <span>Sistemas</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/Marco" class="nav-link">
-                        <i class="nav-icon fas fa-flag"></i>
-                        <p>Marcos</p>
+                    <a class="nav-link" href="/Marco">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-flag"></i>
+                        </span>
+                        <span>Marcos</span>
                     </a>
                 </li>
 
-                @* <li class="nav-item">
-                    <alass ="nav-item">
-                        <a href="/Kanban" class="nav-link">
-                        <i class="nav-icon fas fa-columns"></i>
-                        <p>Kanban</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Atividade">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-list"></i>
+                        </span>
+                        <span>Atividades</span>
                     </a>
-                </li> *@
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Kanban">
+                        <span class="nav-link-icon">
+                            <i class="ti ti-columns"></i>
+                        </span>
+                        <span>Kanban</span>
+                    </a>
+                </li>
 
             </ul>
 
-        </nav>
-        <!-- /.sidebar-menu -->
-
+        </div>
     </div>
-    <!-- /.sidebar -->
-
 </aside>
